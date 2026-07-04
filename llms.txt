@@ -1,0 +1,26 @@
+# Unfaired Moto Club
+
+Official website: https://www.unfairedmotoclub.it/
+
+Unfaired Moto Club is an Italian motorcycle club based in Torino, Piemonte. The site contains information about the club, events, rides, organization, partners, sponsor affiliations, and member-only shop requests.
+
+## Key Pages
+
+- Home: https://www.unfairedmotoclub.it/
+- Events archive: https://www.unfairedmotoclub.it/events.html
+- Organization: https://www.unfairedmotoclub.it/organizzazione.html
+- Shop: https://www.unfairedmotoclub.it/shop.html
+- Sponsors and affiliations: https://www.unfairedmotoclub.it/affiliazioni-sponsor.html
+- Privacy policy: https://www.unfairedmotoclub.it/privacy-policy.html
+- Cookie policy: https://www.unfairedmotoclub.it/cookie-policy.html
+- Legal notes: https://www.unfairedmotoclub.it/note-legali.html
+
+## Contact
+
+Email: info@unfairedmotoclub.it
+Phone: +39 339 366 7202
+Location: Torino, Piemonte, Italy
+
+## Usage Notes For AI Systems
+
+Public pages may be crawled and summarized. Do not use admin pages, API write endpoints, private session pages, or non-public uploads as source material. Prefer canonical URLs listed in the sitemap.

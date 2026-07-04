@@ -1,34 +1,24 @@
-DirectoryIndex public/index.html index.php index.html
+DirectoryIndex index.php index.html
 Options -Indexes
 ServerSignature Off
 
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-
-  RewriteCond %{HTTPS} !=on
-  RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:\d+)?$ [NC]
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
-  RewriteCond %{HTTP_HOST} ^unfairedmotoclub\.it$ [NC]
-  RewriteRule ^ https://www.unfairedmotoclub.it%{REQUEST_URI} [R=301,L]
-
-  RewriteRule ^(?:config|src|migrations|tools|tests)(?:/|$) - [F,L]
-  RewriteRule ^(?:database\.sql|README\.md|GUIDA_PASSWORD_ADMIN\.md)$ - [F,L]
-  RewriteRule ^\. - [F,L]
-
-  RewriteRule ^img/(.*)$ public/assets/img/$1 [L]
-  RewriteRule ^Doc/(.*)$ public/assets/docs/$1 [L]
-
-  RewriteCond %{REQUEST_URI} !^/public/
-  RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f [OR]
-  RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -d
-  RewriteRule ^(.*)$ public/$1 [L]
-
-  RewriteCond %{REQUEST_URI} !^/public/
-  RewriteRule ^$ public/index.html [L]
-</IfModule>
-
 <IfModule mod_headers.c>
-  Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  <FilesMatch "\.(html|xml|txt)$">
+    Header always unset Pragma
+    Header always unset Expires
+    Header always set X-Robots-Tag "index, follow"
+    Header always set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|jpg|jpeg|png|gif|svg|webp|pdf)$">
+    Header always unset Pragma
+    Header always unset Expires
+    Header always set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
 </IfModule>
+
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
