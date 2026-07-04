@@ -1,0 +1,14 @@
+.env
+config/local.php
+error_log
+*.log
+
+public/uploads/events/*
+public/uploads/shop/*
+!public/uploads/events/.gitkeep
+!public/uploads/events/.htaccess
+!public/uploads/shop/.gitkeep
+!public/uploads/shop/.htaccess
+
+.DS_Store
+Thumbs.ds
