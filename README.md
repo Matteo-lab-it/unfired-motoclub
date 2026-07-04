@@ -93,3 +93,4 @@ Lo script verifica versione PHP, estensioni richieste e cartelle upload scrivibi
 - Le cartelle `public/uploads` rifiutano file PHP e disabilitano l'elenco directory.
 - `.env`, log e file caricati dagli utenti sono esclusi da Git tramite `.gitignore`.
 - I form pubblici validano i campi lato server e usano query preparate.
+- Spostamento sito nella cartella principale
