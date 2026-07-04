@@ -1,0 +1,70 @@
+.main-nav a[href="iscrizione.html"] {
+  position: relative;
+  color: #ffe2a8;
+  text-shadow: 0 0 12px rgba(255,176,0,.18);
+  animation: joinMenuGlow 4.8s ease-in-out infinite;
+}
+
+.main-nav a[href="iscrizione.html"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #ffb000, #ff5a1f, transparent);
+  opacity: .55;
+  transform: scaleX(.58);
+  transform-origin: center;
+  animation: joinUnderline 4.8s ease-in-out infinite;
+}
+
+.hero-actions a[href="iscrizione.html"] {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(255,176,0,.42);
+  box-shadow: 0 0 0 1px rgba(255,176,0,.08), 0 0 24px rgba(255,176,0,.10);
+  animation: joinButtonPulse 5.2s ease-in-out infinite;
+}
+
+.hero-actions a[href="iscrizione.html"]::before {
+  content: "";
+  position: absolute;
+  inset: -45% auto -45% -55%;
+  width: 44%;
+  transform: skewX(-18deg);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.24), transparent);
+  animation: joinButtonSheen 5.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes joinMenuGlow {
+  0%, 72%, 100% { color: #ffe2a8; text-shadow: 0 0 12px rgba(255,176,0,.18); }
+  36% { color: #fff3cf; text-shadow: 0 0 18px rgba(255,176,0,.34); }
+}
+
+@keyframes joinUnderline {
+  0%, 72%, 100% { opacity: .42; transform: scaleX(.58); }
+  36% { opacity: .92; transform: scaleX(1); }
+}
+
+@keyframes joinButtonPulse {
+  0%, 70%, 100% { box-shadow: 0 0 0 1px rgba(255,176,0,.08), 0 0 24px rgba(255,176,0,.10); }
+  35% { box-shadow: 0 0 0 1px rgba(255,176,0,.26), 0 0 30px rgba(255,176,0,.22); }
+}
+
+@keyframes joinButtonSheen {
+  0%, 62%, 100% { left: -55%; opacity: 0; }
+  14% { opacity: .7; }
+  36% { left: 115%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-nav a[href="iscrizione.html"],
+  .main-nav a[href="iscrizione.html"]::after,
+  .hero-actions a[href="iscrizione.html"],
+  .hero-actions a[href="iscrizione.html"]::before {
+    animation: none !important;
+  }
+}

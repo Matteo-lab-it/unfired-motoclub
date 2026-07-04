@@ -1,0 +1,360 @@
+GUIDA PUBBLICAZIONE SITO UNFAIRED MOTO CLUB
+===========================================
+
+Questa guida serve per pubblicare il sito su un hosting/server PHP + MySQL.
+Il sito NON e un tema WordPress: va pubblicato come sito PHP custom.
+
+
+1. COSA CARICARE SUL SERVER
+---------------------------
+
+Caricare nella cartella pubblica del dominio, di solito:
+
+- public_html
+- htdocs
+- www
+
+il CONTENUTO della cartella:
+
+public/
+
+Quindi dentro public_html dovranno trovarsi file come:
+
+- index.html
+- events.html
+- event.html
+- shop.html
+- api/
+- admin/
+- assets/
+- .htaccess
+
+Non creare una cartella public dentro public_html, salvo configurazioni particolari.
+La home del sito deve essere raggiungibile come:
+
+https://tuodominio.it/
+
+
+2. CARTELLE DA TENERE FUORI DALLA CARTELLA PUBBLICA
+---------------------------------------------------
+
+Se l hosting lo permette, tenere fuori da public_html:
+
+- src/
+- config/
+- migrations/
+- tools/
+- tests/
+- database.sql
+- .env
+- .env.example
+
+Esempio ideale:
+
+/home/account/
+  src/
+  config/
+  migrations/
+  .env
+  public_html/
+    index.html
+    api/
+    admin/
+    assets/
+
+Se l hosting non permette di mettere file fuori da public_html, avvisare chi gestisce
+il deploy: il file .htaccess presente blocca gia diversi file sensibili, ma la
+configurazione migliore resta sempre tenere .env, src e config fuori dalla root pubblica.
+
+
+3. CONFIGURARE IL FILE .env
+---------------------------
+
+Il file .env contiene i dati segreti e le impostazioni del sito.
+Prima di pubblicare, copiare:
+
+.env.example
+
+e rinominarlo:
+
+.env
+
+Poi modificare i valori.
+
+Esempio di .env per produzione:
+
+APP_ENV=production
+APP_DEBUG=false
+
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=NOME_DATABASE_HOSTING
+DB_USERNAME=UTENTE_DATABASE_HOSTING
+DB_PASSWORD=PASSWORD_DATABASE_HOSTING
+DB_CHARSET=utf8mb4
+
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD_HASH=INCOLLARE_HASH_PASSWORD_ADMIN
+APP_ENCRYPTION_KEY=INCOLLARE_CHIAVE_CIFRATURA
+
+
+3.1 Dove trovo i dati DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD?
+---------------------------------------------------------------------
+
+Nel pannello dell hosting, nella sezione MySQL / Database.
+
+Di solito l hosting mostra:
+
+- Nome database
+- Utente database
+- Password database
+- Host database
+
+Esempio:
+
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=nomeaccount_unfaired
+DB_USERNAME=nomeaccount_admin
+DB_PASSWORD=password-scelta-nel-pannello
+DB_CHARSET=utf8mb4
+
+Attenzione:
+
+- Su molti hosting DB_HOST e localhost.
+- Su altri hosting DB_HOST puo essere una cosa tipo mysql.tuodominio.it.
+- Non lasciare DB_USERNAME=root in produzione.
+- Non lasciare DB_PASSWORD vuoto in produzione.
+
+
+3.2 Come genero la password admin?
+----------------------------------
+
+Non inserire la password admin in chiaro nel file .env.
+Bisogna inserire un hash.
+
+Sul computer locale con XAMPP, aprire PowerShell e lanciare:
+
+C:\xampp\php\php.exe -r "echo password_hash('LA_TUA_PASSWORD_SICURA', PASSWORD_DEFAULT);"
+
+Sostituire LA_TUA_PASSWORD_SICURA con una password vera.
+
+Esempio:
+
+C:\xampp\php\php.exe -r "echo password_hash('MotoClub-Password-2026!', PASSWORD_DEFAULT);"
+
+Il comando stampa una stringa lunga che inizia spesso con:
+
+$2y$...
+
+Copiare quella stringa in .env:
+
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD_HASH=$2y$10$xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Importante:
+
+- Non usare "admin" come password.
+- Non usare la password di esempio.
+- Conservare la password admin in un posto sicuro.
+
+
+3.3 Come genero APP_ENCRYPTION_KEY?
+-----------------------------------
+
+Questa chiave serve per cifrare i dati personali inviati dai form.
+Senza questa chiave i dati cifrati non si possono leggere.
+
+Sul computer locale con XAMPP, aprire PowerShell e lanciare:
+
+C:\xampp\php\php.exe -r "echo 'base64:' . base64_encode(random_bytes(32));"
+
+Il comando stampa una stringa tipo:
+
+base64:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=
+
+Copiare quella stringa in .env:
+
+APP_ENCRYPTION_KEY=base64:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=
+
+Importantissimo:
+
+- Non perdere questa chiave.
+- Non cambiarla dopo che il sito ha gia ricevuto contatti, richieste shop o presenze evento.
+- Se cambi la chiave, i dati gia cifrati nel database non saranno piu leggibili.
+- Non pubblicare questa chiave su GitHub, chat, email pubbliche o pagine del sito.
+
+
+3.4 Controllo finale del file .env
+----------------------------------
+
+Prima di andare online, il file .env NON deve contenere:
+
+APP_ENV=local
+DB_USERNAME=root
+DB_PASSWORD=
+APP_ENCRYPTION_KEY=base64:change-me-with-32-random-bytes
+ADMIN_PASSWORD_HASH=
+
+Deve invece contenere:
+
+APP_ENV=production
+APP_DEBUG=false
+DB_DATABASE=nome_database_reale
+DB_USERNAME=utente_database_reale
+DB_PASSWORD=password_database_reale
+ADMIN_PASSWORD_HASH=hash_password_admin_reale
+APP_ENCRYPTION_KEY=chiave_base64_reale
+
+
+4. CREARE E IMPORTARE IL DATABASE
+---------------------------------
+
+Nel pannello hosting:
+
+1. Creare un database MySQL.
+2. Creare un utente database.
+3. Collegare l utente al database con tutti i permessi.
+4. Aprire phpMyAdmin.
+5. Selezionare il database.
+6. Importare il file:
+
+database.sql
+
+Se nel pacchetto sono presenti file dentro migrations/, importarli solo se il database
+non e gia aggiornato. In caso di dubbio, prima importare database.sql e poi chiedere
+verifica tecnica.
+
+
+5. HTTPS
+--------
+
+Dal pannello hosting attivare il certificato SSL/HTTPS.
+Di solito si chiama:
+
+- Let s Encrypt
+- SSL gratuito
+- Certificato HTTPS
+
+Il sito deve aprirsi con:
+
+https://tuodominio.it/
+
+Non usare in produzione solo:
+
+http://tuodominio.it/
+
+
+6. AREA ADMIN
+-------------
+
+L area admin sara:
+
+https://tuodominio.it/admin/
+
+Credenziali:
+
+- username: quello impostato in ADMIN_USERNAME
+- password: la password originale usata per generare ADMIN_PASSWORD_HASH
+
+Se compare un errore sulla password admin di default, significa che ADMIN_PASSWORD_HASH
+non e stato configurato correttamente.
+
+
+7. TEST DOPO LA PUBBLICAZIONE
+-----------------------------
+
+Dopo il caricamento, controllare:
+
+1. Home:
+   https://tuodominio.it/
+
+2. Eventi:
+   https://tuodominio.it/events.html
+
+3. Shop:
+   https://tuodominio.it/shop.html
+
+4. Privacy:
+   https://tuodominio.it/privacy-policy.html
+
+5. API eventi:
+   https://tuodominio.it/api/events.php
+
+6. API shop:
+   https://tuodominio.it/api/shop-products.php
+
+7. Admin:
+   https://tuodominio.it/admin/
+
+8. Creare un evento di prova dall admin.
+9. Aprire l evento dal sito pubblico.
+10. Compilare "Partecipa".
+11. Tornare in admin e verificare che la presenza compaia.
+12. Provare lo scarico Excel/CSV delle presenze.
+
+
+8. COSE LEGALI DA COMPLETARE PRIMA DEL GO-LIVE
+----------------------------------------------
+
+Prima della pubblicazione definitiva, confermare:
+
+- Ragione sociale ufficiale corretta.
+- Codice fiscale corretto.
+- Eventuale P.IVA, se esiste.
+- Indirizzo completo della sede legale, se previsto dai dati ufficiali.
+- Email ufficiale per privacy e contatti.
+- Tempi di conservazione dati.
+- Nome del provider hosting.
+
+Le pagine privacy/cookie/note legali sono state preparate, ma la conformita legale
+definitiva va validata dal titolare o da un consulente.
+
+
+9. ERRORI COMUNI
+----------------
+
+Errore database:
+
+- Controllare DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD.
+- Verificare che il database sia stato importato.
+
+Errore cifratura:
+
+- Controllare APP_ENCRYPTION_KEY.
+- Deve iniziare con base64: e deve essere generata con random_bytes(32).
+
+Admin non entra:
+
+- Controllare ADMIN_USERNAME.
+- Controllare che ADMIN_PASSWORD_HASH sia stato generato dalla password corretta.
+- Non copiare spazi prima o dopo l hash.
+
+Pagina bianca:
+
+- Attivare log errori hosting.
+- Controllare versione PHP, consigliata PHP 8.2 o superiore.
+- Controllare che src/ e config/ siano nella posizione corretta rispetto a public_html.
+
+Le API danno 404:
+
+- Controllare che la cartella api/ sia stata caricata dentro public_html.
+- Controllare che .htaccess sia stato caricato.
+
+
+10. CHECKLIST FINALE RAPIDA
+---------------------------
+
+[ ] File public/ caricati nella root pubblica del dominio.
+[ ] src/ e config/ presenti nella posizione corretta.
+[ ] .env creato e configurato.
+[ ] Database MySQL creato.
+[ ] database.sql importato.
+[ ] HTTPS attivo.
+[ ] Admin password cambiata.
+[ ] APP_ENCRYPTION_KEY generata e salvata in modo sicuro.
+[ ] Privacy/Cookie/Note legali controllate.
+[ ] Test evento + partecipazione completato.
+[ ] Test shop completato.
+[ ] Backup iniziale fatto.
+

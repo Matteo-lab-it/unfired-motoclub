@@ -1,0 +1,13 @@
+ALTER TABLE contacts
+  MODIFY name VARCHAR(512) NOT NULL,
+  MODIFY email VARCHAR(512) NOT NULL,
+  MODIFY subject VARCHAR(512) NOT NULL;
+
+ALTER TABLE shop_requests
+  MODIFY customer_name VARCHAR(512) NOT NULL,
+  MODIFY customer_email VARCHAR(512) NOT NULL,
+  MODIFY customer_phone VARCHAR(512) NULL;
+
+ALTER TABLE event_attendees
+  MODIFY name VARCHAR(512) NOT NULL,
+  MODIFY motorcycle_model VARCHAR(512) NOT NULL;

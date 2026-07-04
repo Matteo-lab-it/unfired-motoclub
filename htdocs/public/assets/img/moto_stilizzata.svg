@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc" style="color:#ffffff">
+  <title id="title">Moto sportiva stilizzata</title>
+  <desc id="desc">Illustrazione vettoriale minimal di una moto sportiva, scalabile e colorabile via CSS.</desc>
+
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Ruote -->
+    <circle cx="225" cy="310" r="82" stroke-width="24"/>
+    <circle cx="735" cy="310" r="82" stroke-width="24"/>
+    <circle cx="225" cy="310" r="15" fill="currentColor" stroke="none"/>
+    <circle cx="735" cy="310" r="15" fill="currentColor" stroke="none"/>
+
+    <!-- Telaio e forcellone -->
+    <path d="M225 310 L355 295 L490 205 L590 300 L735 310" stroke-width="22"/>
+    <path d="M355 295 L445 305 L545 300" stroke-width="16"/>
+    <path d="M490 205 L555 290" stroke-width="16"/>
+
+    <!-- Carena sportiva -->
+    <path d="M330 285
+             C365 245 405 220 455 205
+             C505 190 560 178 628 188
+             C676 195 712 215 744 244
+             L700 254
+             C665 235 630 227 588 228
+             L535 236
+             L480 266
+             L405 286 Z"
+          fill="currentColor" stroke="none"/>
+
+    <!-- Taglio carena -->
+    <path d="M450 220 C505 210 565 205 635 214" stroke="white" stroke-opacity="0.38" stroke-width="10"/>
+
+    <!-- Serbatoio e sella -->
+    <path d="M405 206 C430 166 474 145 530 153 C553 156 578 170 594 188 L500 207 Z"
+          fill="currentColor" stroke="none"/>
+    <path d="M520 156 C565 132 628 132 683 150 L662 178 L587 181 Z"
+          fill="currentColor" stroke="none"/>
+
+    <!-- Cupolino -->
+    <path d="M620 183 C652 144 700 132 750 142 C724 157 703 176 687 204 Z"
+          fill="currentColor" stroke="none"/>
+
+    <!-- Manubrio e forcella -->
+    <path d="M675 188 L713 166" stroke-width="14"/>
+    <path d="M692 199 L735 310" stroke-width="18"/>
+
+    <!-- Scarico -->
+    <path d="M385 298 C420 323 474 335 535 329" stroke-width="18"/>
+    <path d="M535 329 L610 326" stroke-width="24"/>
+
+    <!-- Dettaglio motore -->
+    <path d="M455 258 L520 248 L555 286 L503 307 L446 294 Z" fill="white" fill-opacity="0.18" stroke="none"/>
+  </g>
+</svg>

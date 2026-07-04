@@ -1,0 +1,77 @@
+body {
+  position: relative;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  opacity: .032;
+  mix-blend-mode: screen;
+}
+
+body::before {
+  background-image:
+    url("../img/moto_stilizzata.svg"),
+    url("../img/moto_stilizzata.svg"),
+    url("../img/moto_stilizzata.svg");
+  background-size: 138px auto, 92px auto, 168px auto;
+  background-position: 72vw 18vh, 86vw 58vh, -180px 86vh;
+  animation: motoFloatWide 38s linear infinite;
+}
+
+body::after {
+  background-image:
+    url("../img/moto_stilizzata.svg"),
+    url("../img/moto_stilizzata.svg");
+  background-size: 78px auto, 118px auto;
+  background-position: 92vw 34vh, calc(100vw + 180px) 72vh;
+  animation: motoFloatBack 46s linear infinite;
+  opacity: .026;
+}
+
+@keyframes motoFloatWide {
+  0% {
+    background-position: 72vw 18vh, 86vw 58vh, -180px 86vh;
+  }
+  100% {
+    background-position: calc(100vw + 180px) 12vh, calc(100vw + 120px) 64vh, calc(100vw + 230px) 80vh;
+  }
+}
+
+@keyframes motoFloatBack {
+  0% {
+    background-position: 92vw 34vh, calc(100vw + 180px) 72vh;
+  }
+  100% {
+    background-position: -120px 40vh, -180px 66vh;
+  }
+}
+
+@media (max-width: 640px) {
+  body::before {
+    background-size: 96px auto, 72px auto, 118px auto;
+    opacity: .038;
+  }
+
+  body::after {
+    background-size: 64px auto, 88px auto;
+    opacity: .03;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
+}
