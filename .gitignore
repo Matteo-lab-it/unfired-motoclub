@@ -1,7 +1,12 @@
 .env
+.env.local
+.env.*.local
 config/local.php
 error_log
 *.log
+.agents/
+vendor/
+node_modules/
 
 public/uploads/events/*
 public/uploads/shop/*
@@ -11,4 +16,4 @@ public/uploads/shop/*
 !public/uploads/shop/.htaccess
 
 .DS_Store
-Thumbs.ds
+Thumbs.db

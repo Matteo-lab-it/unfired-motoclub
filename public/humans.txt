@@ -1,0 +1,11 @@
+/* TEAM */
+Organization: Unfaired Moto Club
+Site: https://www.unfairedmotoclub.it/
+Contact: info@unfairedmotoclub.it
+Location: Torino, Piemonte, Italia
+
+/* SITE */
+Language: Italian
+Standards: HTML5, CSS3, JavaScript, PHP
+Sitemap: https://www.unfairedmotoclub.it/sitemap.xml
+Robots: https://www.unfairedmotoclub.it/robots.txt

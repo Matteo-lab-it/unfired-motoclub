@@ -1,0 +1,24 @@
+DirectoryIndex index.php index.html
+Options -Indexes
+ServerSignature Off
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  <FilesMatch "\.(html|xml|txt)$">
+    Header always unset Pragma
+    Header always unset Expires
+    Header always set X-Robots-Tag "index, follow"
+    Header always set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|jpg|jpeg|png|gif|svg|webp|pdf)$">
+    Header always unset Pragma
+    Header always unset Expires
+    Header always set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
