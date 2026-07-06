@@ -149,6 +149,7 @@
 
     .cards-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
     .tier-card { display: grid; gap: 16px; border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius); background: #151515; padding: 24px; min-height: 100%; }
+    .tier-image { width: 100%; max-height: 190px; object-fit: contain; border-radius: 14px; background: #f5f5f5; padding: 12px; }
     .tier-card strong { color: var(--accent-2); font-size: 1.7rem; line-height: 1; }
     .tier-card p { color: var(--muted); }
     .price-lines { display: grid; gap: 8px; padding-top: 12px; border-top: 1px solid var(--line); color: #ddd; }
@@ -286,6 +287,7 @@
               <h3>Member FMI</h3>
               <strong>60 euro</strong>
             </div>
+            <img class="tier-image" src="assets/img/tessera-memebri.png?v=4" alt="Tessera FMI Member">
             <p>Tessera adatta a chi vuole vivere il club, partecipare agli eventi e accedere ai vantaggi FMI.</p>
             <div class="price-lines">
               <span>40 euro - Tessera Member FMI</span>
@@ -298,6 +300,7 @@
               <h3>Sport FMI</h3>
               <strong>140 euro</strong>
             </div>
+            <img class="tier-image" src="assets/img/tessere-sport.png?v=4" alt="Tessera FMI Sport">
             <p>Tessera pensata anche per attivita sportive, allenamenti in impianti omologati e coperture dedicate.</p>
             <div class="price-lines">
               <span>120 euro - Tessera Sport FMI</span>
@@ -310,6 +313,7 @@
               <h3>Mini Sport FMI</h3>
               <strong>55 euro</strong>
             </div>
+            <img class="tier-image" src="assets/img/tessera-mini.png?v=4" alt="Tessera FMI Mini Sport">
             <p>Formula dedicata ai piu giovani secondo le categorie e le regole previste dalla FMI.</p>
             <div class="price-lines">
               <span>35 euro - Tessera Mini Sport FMI</span>
@@ -378,15 +382,9 @@
           <label>
             Tipo tessera
             <select name="tessera">
-              <option value="Member">Member</option>
-              <option value="Sport">Sport</option>
-              <option value="Mini Sport">Mini Sport</option>
-              <option value="Mini Road">Mini Road</option>
-              <option value="Velocita">Velocita</option>
-              <option value="Elite">Elite</option>
-              <option value="Elite Femminile">Elite Femminile</option>
-              <option value="One Event">One Event</option>
-              <option value="Sport One Day">Sport One Day</option>
+              <option value="Member FMI">Member FMI</option>
+              <option value="Sport FMI">Sport FMI</option>
+              <option value="Mini Sport FMI">Mini Sport FMI</option>
             </select>
           </label>
 
