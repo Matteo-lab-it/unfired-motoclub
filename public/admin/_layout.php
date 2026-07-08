@@ -69,7 +69,8 @@ function admin_header(string $title): void
       </a>
       <nav class="nav">
         <a href="/admin/">Dashboard</a>
-        <a href="/admin/contacts.php">Richieste iscritti</a>
+        <a href="/admin/memberships.php">Richieste iscrizione</a>
+        <a href="/admin/contacts.php">Contatti</a>
         <a href="/admin/events.php">Eventi</a>
         <a href="/admin/shop.php">Shop</a>
         <a href="/" target="_blank">Vedi sito</a>

@@ -376,7 +376,7 @@
           </div>
         </div>
 
-        <form class="panel join-form" id="membershipForm" action="api/contact.php" method="post">
+        <form class="panel join-form" id="membershipForm" action="api/membership-request.php" method="post">
           <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;opacity:0;" />
 
           <label>
@@ -507,39 +507,13 @@
       return String(formData.get(name) || "").trim();
     }
 
-    function buildMembershipMessage(formData) {
-      return [
-        `Tipo tessera: ${field(formData, "tessera")}`,
-        `Nome e cognome: ${field(formData, "nome")}`,
-        `Data di nascita: ${field(formData, "nascita")}`,
-        `Codice fiscale: ${field(formData, "codicefiscale")}`,
-        `Citta: ${field(formData, "citta")}`,
-        `Telefono: ${field(formData, "telefono")}`,
-        `Email: ${field(formData, "email")}`,
-        `Marca moto: ${field(formData, "marca_moto") || "-"}`,
-        `Modello moto: ${field(formData, "modello_moto") || "-"}`,
-        `Targa moto: ${field(formData, "targa_moto") || "-"}`,
-        `Gia tesserato FMI: ${field(formData, "fmi")}`,
-        "",
-        "Messaggio:",
-        field(formData, "note") || "-"
-      ].join("\n");
-    }
-
     async function sendMembershipRequest(event) {
       event.preventDefault();
       const form = event.target;
       const message = document.getElementById("membershipMessage");
       const button = form.querySelector("button[type='submit']");
       const originalText = button.textContent;
-      const sourceData = new FormData(form);
-      const payload = new FormData();
-
-      payload.set("website", field(sourceData, "website"));
-      payload.set("nome", field(sourceData, "nome"));
-      payload.set("email", field(sourceData, "email"));
-      payload.set("oggetto", `Richiesta iscrizione - ${field(sourceData, "tessera")}`);
-      payload.set("messaggio", buildMembershipMessage(sourceData));
+      const payload = new FormData(form);
 
       message.style.color = "var(--muted)";
       message.textContent = "Invio in corso...";

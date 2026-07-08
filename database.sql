@@ -97,6 +97,29 @@ CREATE TABLE IF NOT EXISTS shop_requests (
   CONSTRAINT shop_requests_product_fk FOREIGN KEY (product_id) REFERENCES shop_products(id) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS membership_requests (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  membership_type VARCHAR(80) NOT NULL,
+  full_name VARCHAR(512) NOT NULL,
+  birth_date DATE NOT NULL,
+  fiscal_code VARCHAR(512) NOT NULL,
+  city VARCHAR(512) NOT NULL,
+  phone VARCHAR(512) NOT NULL,
+  email VARCHAR(512) NOT NULL,
+  motorcycle_brand VARCHAR(512) NULL,
+  motorcycle_model VARCHAR(512) NULL,
+  motorcycle_plate VARCHAR(512) NULL,
+  already_fmi ENUM('Si', 'No') NOT NULL DEFAULT 'No',
+  notes TEXT NULL,
+  status ENUM('new', 'processing', 'completed', 'archived') NOT NULL DEFAULT 'new',
+  ip_address VARCHAR(45) NULL,
+  user_agent VARCHAR(255) NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  INDEX membership_requests_created_at_index (created_at),
+  INDEX membership_requests_status_index (status),
+  INDEX membership_requests_email_index (email)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 INSERT INTO shop_products (name, description, sizes, image_path, sort_order, is_published)
 SELECT 'Cappellino Ufficiale Unfaired Motoclub', 'Cappellino ufficiale riservato ai soci, pensato per eventi, ride e attivita del club.', 'Unica', 'assets/img/cappellini.jpeg', 10, 1
 WHERE NOT EXISTS (SELECT 1 FROM shop_products WHERE name = 'Cappellino Ufficiale Unfaired Motoclub');

@@ -4,7 +4,7 @@ declare(strict_types=1);
 require __DIR__ . '/../../src/auth.php';
 
 if (is_admin_logged_in()) {
-    header('Location: /admin/');
+    header('Location: /public/admin/index.php');
     exit;
 }
 

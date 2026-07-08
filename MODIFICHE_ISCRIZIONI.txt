@@ -1,0 +1,217 @@
+MODIFICHE RICHIESTE ISCRIZIONE
+==============================
+
+Data: 7 luglio 2026
+
+Problema trovato
+----------------
+
+Le richieste inviate dalla pagina iscrizione.html non avevano una gestione dedicata.
+Il modulo inviava i dati a:
+
+public/api/contact.php
+
+Quindi le richieste di iscrizione finivano dentro la tabella generica:
+
+contacts
+
+I dati venivano salvati come un unico messaggio di testo, insieme agli altri contatti
+del sito. Funzionava, ma non era ordinato e non permetteva di gestire bene le
+iscrizioni dal pannello admin.
+
+
+Modifiche fatte
+---------------
+
+1. Creata una nuova tabella dedicata alle iscrizioni:
+
+membership_requests
+
+La tabella contiene campi separati per:
+
+- tipo tessera
+- nome e cognome
+- data di nascita
+- codice fiscale
+- citta
+- telefono
+- email
+- marca moto
+- modello moto
+- targa moto
+- gia tesserato FMI
+- note
+- stato richiesta
+- data creazione
+
+
+2. Aggiornato database.sql
+
+Il file database.sql ora contiene anche la creazione della tabella:
+
+membership_requests
+
+Questo serve per le nuove installazioni del sito.
+
+
+3. Creata una migration per database gia esistenti
+
+File creato:
+
+migrations/2026_07_07_membership_requests.sql
+
+Questo file serve per aggiungere la tabella membership_requests a un database
+che esiste gia, senza dover reinstallare tutto.
+
+
+4. Creata una nuova API dedicata alle richieste iscrizione
+
+File creato:
+
+public/api/membership-request.php
+
+Questa API riceve i dati dal modulo iscrizione e li salva nella tabella:
+
+membership_requests
+
+I dati personali vengono cifrati usando la chiave APP_ENCRYPTION_KEY gia presente
+nel file .env.
+
+
+5. Collegato il modulo iscrizione alla nuova API
+
+File modificati:
+
+iscrizione.html
+public/iscrizione.html
+
+Prima il form usava:
+
+api/contact.php
+
+Ora usa:
+
+api/membership-request.php
+
+
+6. Creata una pagina admin dedicata
+
+File creato:
+
+public/admin/memberships.php
+
+Da questa pagina si possono vedere le richieste di iscrizione con i campi separati.
+Si puo anche cambiare lo stato della richiesta:
+
+- Nuova
+- In gestione
+- Completata
+- Archiviata
+
+Si puo anche eliminare una richiesta.
+
+
+7. Aggiornato il menu admin
+
+File modificato:
+
+public/admin/_layout.php
+
+Nel menu admin ora ci sono:
+
+- Richieste iscrizione
+- Contatti
+- Eventi
+- Shop
+
+Prima la voce "Richieste iscritti" puntava ai contatti generici.
+
+
+8. Aggiornata la dashboard admin
+
+File modificato:
+
+public/admin/index.php
+
+La dashboard ora mostra:
+
+- iscrizioni totali
+- iscrizioni nuove
+- ultimi contatti
+- eventi
+- richieste shop
+
+
+File modificati o creati
+------------------------
+
+Modificati:
+
+- database.sql
+- iscrizione.html
+- public/iscrizione.html
+- public/admin/_layout.php
+- public/admin/index.php
+
+Creati:
+
+- migrations/2026_07_07_membership_requests.sql
+- public/api/membership-request.php
+- public/admin/memberships.php
+
+
+Controlli eseguiti
+------------------
+
+Controllo sintassi PHP eseguito con successo su:
+
+- public/api/membership-request.php
+- public/admin/memberships.php
+- public/admin/index.php
+- public/admin/_layout.php
+
+Non sono stati rilevati errori di sintassi PHP.
+
+
+Cosa resta da fare in locale
+----------------------------
+
+Avviare MySQL da XAMPP.
+
+Poi eseguire questo comando dalla cartella del progetto:
+
+Get-Content migrations\2026_07_07_membership_requests.sql | C:\xampp\mysql\bin\mysql.exe -u root unfired_moto_club
+
+Questo comando crea la tabella membership_requests nel database locale.
+
+
+Come testare
+------------
+
+1. Aprire:
+
+http://localhost/iscrizione.html
+
+2. Compilare il modulo iscrizione.
+
+3. Aprire il pannello admin:
+
+http://localhost/admin/
+
+4. Entrare nella nuova sezione:
+
+http://localhost/admin/memberships.php
+
+5. Verificare che la richiesta sia presente.
+
+
+Cosa fare prima di pubblicare online
+------------------------------------
+
+Sul database dell'hosting bisogna importare anche:
+
+migrations/2026_07_07_membership_requests.sql
+
+Oppure, se si crea il database da zero, basta importare il nuovo database.sql.
+
+Dopo il test locale, ricordarsi di fare commit e push delle modifiche su GitHub.
