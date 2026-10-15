@@ -11,14 +11,14 @@ function admin_header(string $title): void
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= h($title) ?> - Unfaired Admin</title>
   <style>
-    :root { --bg: #0f0f0f; --panel: #181818; --panel-2: #202020; --text: #f5f5f5; --muted: #b8b8b8; --line: rgba(255,255,255,.12); --accent: #ff5a1f; --accent-2: #ffb000; --danger: #ff6b6b; --ok: #7bd88f; }
+    :root { --bg: #0B5769; --panel: #181818; --panel-2: #202020; --text: #f5f5f5; --muted: #b8b8b8; --line: rgba(255,255,255,.12); --accent: #008080; --accent-2: #008080; --danger: #ff6b6b; --ok: #7bd88f; }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); }
     a { color: inherit; text-decoration: none; }
     .shell { min-height: 100vh; display: grid; grid-template-columns: 260px 1fr; }
-    .sidebar { padding: 24px; background: #090909; border-right: 1px solid var(--line); }
+    .sidebar { padding: 24px; background: #0B5769; border-right: 1px solid var(--line); }
     .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
-    .brand-mark { width: 42px; height: 42px; object-fit: cover; border-radius: 50%; background: #111; border: 1px solid rgba(255,255,255,.16); }
+    .brand-mark { width: 118px; height: 44px; object-fit: contain; padding: 6px 8px; border-radius: 10px; background: rgba(255,255,255,.94); border: 1px solid rgba(255,255,255,.72); }
     .nav { display: grid; gap: 8px; }
     .nav a { padding: 12px 14px; border-radius: 10px; color: #ddd; border: 1px solid transparent; }
     .nav a:hover { background: rgba(255,255,255,.05); border-color: var(--line); color: var(--accent-2); }
@@ -45,7 +45,7 @@ function admin_header(string $title): void
     .span-2 { grid-column: span 2; }
     .badge { display: inline-flex; align-items: center; padding: 5px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
     .badge-ok { color: var(--ok); border-color: rgba(123,216,143,.45); }
-    .badge-warn { color: var(--accent-2); border-color: rgba(255,176,0,.45); }
+    .badge-warn { color: var(--accent-2); border-color: rgba(0,128,128,.45); }
     .message { max-width: 360px; white-space: pre-wrap; }
     .notice { margin-bottom: 18px; padding: 12px 14px; border: 1px solid rgba(123,216,143,.35); border-radius: 10px; color: var(--ok); background: rgba(123,216,143,.08); }
     @media (max-width: 860px) {
@@ -64,7 +64,7 @@ function admin_header(string $title): void
   <div class="shell">
     <aside class="sidebar">
       <a class="brand" href="/admin/">
-        <img class="brand-mark" src="/assets/img/logo2.jpg" alt="Unfaired Moto Club">
+        <img class="brand-mark" src="/assets/img/logo.svg" alt="Unfaired Moto Club">
         <span>Admin</span>
       </a>
       <nav class="nav">
@@ -117,3 +117,5 @@ function admin_database_error(Throwable $exception): void
     admin_footer();
     exit;
 }
+
+

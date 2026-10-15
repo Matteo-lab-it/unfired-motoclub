@@ -1,0 +1,5 @@
+﻿public/assets/img/corpo.png
+public/assets/img/corpo1.png
+public/assets/img/corpo2.png
+public/assets/img/home.png
+public/assets/img/logo2.jpg

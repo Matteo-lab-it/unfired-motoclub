@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Iscrizione a Unfaired Moto Club ASD: tessere FMI, quote associative e modulo per richiedere il tesseramento." />
   <title>Iscrizione - Unfaired Moto Club</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
 
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="Unfaired Moto Club" />
@@ -12,7 +13,7 @@
   <meta name="geo.placename" content="Torino, Piemonte" />
   <meta name="geo.position" content="45.0703;7.6869" />
   <meta name="ICBM" content="45.0703, 7.6869" />
-  <meta name="theme-color" content="#090909" />
+  <meta name="theme-color" content="#0B5769" />
   <link rel="canonical" href="https://www.unfairedmotoclub.it/iscrizione.html" />
   <meta property="og:locale" content="it_IT" />
   <meta property="og:site_name" content="Unfaired Moto Club" />
@@ -20,11 +21,11 @@
   <meta property="og:title" content="Iscrizione - Unfaired Moto Club" />
   <meta property="og:description" content="Iscrizione a Unfaired Moto Club ASD: tessere FMI, quote associative e modulo per richiedere il tesseramento." />
   <meta property="og:url" content="https://www.unfairedmotoclub.it/iscrizione.html" />
-  <meta property="og:image" content="https://www.unfairedmotoclub.it/assets/img/logo2.jpg" />
+  <meta property="og:image" content="https://www.unfairedmotoclub.it/assets/img/logo.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Iscrizione - Unfaired Moto Club" />
   <meta name="twitter:description" content="Iscrizione a Unfaired Moto Club ASD: tessere FMI, quote associative e modulo per richiedere il tesseramento." />
-  <meta name="twitter:image" content="https://www.unfairedmotoclub.it/assets/img/logo2.jpg" />
+  <meta name="twitter:image" content="https://www.unfairedmotoclub.it/assets/img/logo.svg" />
 
   <script type="application/ld+json">
   {
@@ -42,14 +43,14 @@
 
   <style>
     :root {
-      --bg: #090909;
+      --bg: #0B5769;
       --panel: #151515;
       --card: #181818;
       --text: #f5f5f5;
       --muted: #b6b6b6;
       --line: rgba(255,255,255,.12);
-      --accent: #ff5a1f;
-      --accent-2: #ffb000;
+      --accent: #008080;
+      --accent-2: #008080;
       --max-width: 1180px;
       --radius: 16px;
       --shadow: 0 18px 50px rgba(0,0,0,.35);
@@ -60,8 +61,8 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 82% 10%, rgba(255,90,31,.13), transparent 25%),
-        linear-gradient(180deg, #070707 0%, #101010 100%);
+        radial-gradient(circle at 82% 10%, rgba(0,128,128,.13), transparent 25%),
+        linear-gradient(180deg, #0B5769 0%, #083f4d 100%);
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
@@ -87,15 +88,22 @@
       cursor: pointer;
       transition: .22s ease;
     }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #111; box-shadow: 0 10px 30px rgba(255,90,31,.25); }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #111; box-shadow: 0 10px 30px rgba(0,128,128,.25); }
     .btn-secondary { border-color: var(--line); background: rgba(255,255,255,.04); color: #fff; }
     .btn:hover { transform: translateY(-2px); }
 
-    .site-header { position: fixed; inset: 0 0 auto; z-index: 1000; background: rgba(8,8,8,.78); backdrop-filter: blur(15px); border-bottom: 1px solid var(--line); }
+    .site-header { position: fixed; inset: 0 0 auto; z-index: 1000; background: linear-gradient(135deg, rgba(11,87,105,.96) 0%, rgba(8,63,77,.94) 58%, rgba(0,128,128,.84) 100%); backdrop-filter: blur(15px); border-bottom: 1px solid var(--line); }
     .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
-    .brand-mark { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; background: #111; box-shadow: 0 0 28px rgba(255,90,31,.28); border: 1px solid rgba(255,255,255,.16); }
-    .main-nav { display: flex; align-items: center; gap: 18px; font-size: .95rem; font-weight: 700; }
+    .brand-mark {
+      width: clamp(92px, 12vw, 138px);
+      height: 52px;
+      border-radius: 10px;
+      object-fit: contain; padding: 6px 8px;
+      background: rgba(255,255,255,.94);
+      box-shadow: none;
+      border: 1px solid rgba(255,255,255,.72);
+    }.main-nav { display: flex; align-items: center; gap: 18px; font-size: .95rem; font-weight: 700; }
     .main-nav a { color: #d8d8d8; transition: .2s ease; }
     .main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--accent-2); }
     .menu-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); background: rgba(255,255,255,.04); color: #fff; border-radius: 12px; cursor: pointer; place-items: center; gap: 4px; }
@@ -118,7 +126,7 @@
       z-index: -2;
       background:
         linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.62)),
-        url("assets/img/home.png") center/cover no-repeat;
+        url("assets/img/home.jpeg") center/cover no-repeat;
       filter: contrast(1.05);
     }
     .hero::after { content: ""; position: absolute; inset: auto 0 0; height: 190px; z-index: -1; background: linear-gradient(transparent, #101010); }
@@ -145,7 +153,7 @@
     .panel p, .panel li { color: var(--muted); }
     .check-list { display: grid; gap: 10px; list-style: none; margin-top: 18px; }
     .check-list li { position: relative; padding-left: 28px; }
-    .check-list li::before { content: ""; position: absolute; left: 0; top: .45em; width: 13px; height: 13px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 16px rgba(255,176,0,.25); }
+    .check-list li::before { content: ""; position: absolute; left: 0; top: .45em; width: 13px; height: 13px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 16px rgba(0,128,128,.25); }
 
     .cards-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
     .tier-card { display: grid; gap: 16px; border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius); background: #151515; padding: 24px; min-height: 100%; }
@@ -157,6 +165,54 @@
     .highlight-band { background: linear-gradient(180deg, rgba(255,255,255,.02), transparent), #101010; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     .fine-print { color: var(--muted); font-size: .95rem; margin-top: 18px; }
+
+    .membership-stack { display: grid; gap: 24px; }
+    .membership-row {
+      display: grid;
+      grid-template-columns: minmax(220px, .42fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+    .membership-row:nth-child(even) { grid-template-columns: minmax(0, 1fr) minmax(220px, .42fr); }
+    .membership-row:nth-child(even) .membership-media { order: 2; }
+    .membership-media {
+      min-height: 230px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: #f5f5f5;
+      padding: 18px;
+      overflow: hidden;
+    }
+    .membership-media img { max-height: 230px; object-fit: contain; }
+    .membership-content { display: grid; gap: 16px; }
+    .membership-content p, .membership-content li { color: var(--muted); }
+    .membership-price {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: rgba(0,128,128,.14);
+      color: #fff;
+      border: 1px solid rgba(0,128,128,.42);
+      font-weight: 900;
+    }
+    .feature-list { display: grid; gap: 8px; padding-left: 18px; }
+    .split-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 22px; }
+    .note-box {
+      border: 1px solid rgba(0,128,128,.26);
+      background: rgba(0,128,128,.08);
+      border-radius: 14px;
+      padding: 16px;
+      color: var(--muted);
+    }
 
     .form-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 28px; align-items: start; }
     .join-form { display: grid; gap: 16px; }
@@ -179,29 +235,52 @@
     .privacy-summary { display: grid; gap: 10px; margin-top: 22px; color: var(--muted); font-size: .95rem; }
     .privacy-summary strong { color: #fff; }
     .privacy-summary ul { display: grid; gap: 8px; padding-left: 18px; }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 46px 0 34px;
+      background: #080808;
+    }
 
-    footer { padding: 46px 0; border-top: 1px solid var(--line); background: #090909; color: var(--muted); }
-    .footer-inner { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 34px;
+      align-items: start;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
     .footer-brand { color: #fff; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 10px; }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 14px; }
-    .footer-links a:hover { color: var(--accent-2); }
+    .footer-copy { max-width: 470px; margin-bottom: 22px; }
+    .footer-info { display: grid; gap: 4px; margin-bottom: 22px; color: var(--muted); }
+    .footer-info a { color: #fff; font-weight: 700; }
+    .footer-info a:hover { color: var(--accent-2); }
+    .footer-links, .footer-legal { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; }
+    .footer-links a, .footer-legal a, .footer-legal button { color: #ddd; font: inherit; background: none; border: 0; padding: 0; cursor: pointer; transition: .2s ease; }
+    .footer-links a:hover, .footer-legal a:hover, .footer-legal button:hover { color: var(--accent-2); }
+    .footer-meta { display: grid; gap: 14px; justify-items: end; }
 
-    @media (max-width: 980px) {
-      .main-nav { position: fixed; top: 76px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 14px 4%; background: rgba(8,8,8,.96); border-bottom: 1px solid var(--line); }
+    .socials { display: flex; gap: 12px; justify-content: flex-end; }
+    .socials a { min-width: 42px; height: 42px; padding: 0 12px; display: grid; place-items: center; border-radius: 12px; border: 1px solid var(--line); color: #fff; transition: .2s ease; }
+    .socials svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .socials a:hover { border-color: var(--accent); color: var(--accent-2); }
+@media (max-width: 980px) {
+      .main-nav { position: fixed; top: 76px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 14px 4%; background: linear-gradient(135deg, rgba(11,87,105,.98) 0%, rgba(8,63,77,.98) 62%, rgba(0,128,128,.92) 100%); border-bottom: 1px solid var(--line); }
       .main-nav.open { display: flex; }
       .main-nav a { padding: 13px 0; }
       .menu-toggle { display: grid; }
-      .intro-grid, .two-col, .form-wrap { grid-template-columns: 1fr; }
+      .intro-grid, .two-col, .form-wrap, .membership-row, .membership-row:nth-child(even) { grid-template-columns: 1fr; }
+      .membership-row:nth-child(even) .membership-media { order: 0; }
+      .split-list { grid-template-columns: 1fr; }
       .cards-grid { grid-template-columns: 1fr; }
     }
-    @media (max-width: 640px) {
-      .brand span { font-size: .86rem; }
-      .hero { min-height: auto; padding: 116px 0 58px; }
+    @media (max-width: 640px) {      .hero { min-height: auto; padding: 116px 0 58px; }
       .form-row { grid-template-columns: 1fr; }
       .panel { padding: 20px; }
     }
   </style>
   <link rel="stylesheet" href="assets/css/join-attention.css?v=1" />
+  <link rel="stylesheet" href="assets/css/cookie-notice.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Salta al contenuto</a>
@@ -209,8 +288,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Unfaired Moto Club">
-        <img class="brand-mark" src="assets/img/logo2.jpg" alt="Unfaired Moto Club">
-        <span>Unfaired Moto Club</span>
+        <img class="brand-mark" src="assets/img/logo.svg" alt="Unfaired Moto Club">
       </a>
 
       <button class="menu-toggle" type="button" aria-label="Apri menu" aria-controls="mainNav" aria-expanded="false" onclick="toggleMenu()">
@@ -250,21 +328,19 @@
     <section>
       <div class="container intro-grid">
         <div>
-          <span class="eyebrow">Perche iscriversi</span>
-          <h2>Club, eventi e vantaggi FMI</h2>
+          <span class="eyebrow">Diventa socio</span>
+          <h2>Entra in Unfaired Motoclub</h2>
           <p class="section-text">
-            Se anche per te la moto e passione, strada e condivisione, puoi
-            richiedere l'iscrizione compilando il modulo in fondo alla pagina.
+            Unfaired Motoclub ASD e affiliato FMI. Da qui puoi scegliere la formula piu adatta per vivere il club, partecipare a ride di gruppo, eventi, track day e attivita motociclistiche.
           </p>
         </div>
         <div class="panel">
-          <h3>Cosa comprende</h3>
+          <h3>Cosa trovi nella pagina</h3>
           <ul class="check-list">
-            <li>Tessera FMI Member, Sport o altra formula disponibile.</li>
-            <li>Partecipazione agli eventi del motoclub.</li>
-            <li>Accesso a ride, track day e viaggi organizzati.</li>
-            <li>Partecipazione alla community Unfaired Moto Club.</li>
-            <li>Sconti e convenzioni dai nostri sponsor e partner.</li>
+            <li>Quote associative e tesseramento FMI.</li>
+            <li>Dettaglio Tessera Member, Sport e Mini Sport.</li>
+            <li>Informazioni su Licenze FMI e Sport One Day.</li>
+            <li>Modulo finale per inviare la richiesta al motoclub.</li>
           </ul>
         </div>
       </div>
@@ -276,8 +352,7 @@
           <span class="eyebrow">Quote principali</span>
           <h2>Scegli la tessera</h2>
           <p class="section-text">
-            Le quote riportate sono quelle indicate per il tesseramento annuale.
-            Il club ti ricontattera per confermare dati, documenti necessari e pagamento.
+            Le quote riportate servono come riferimento per la richiesta. Lo staff ti ricontattera per confermare importi, documenti necessari e disponibilita in base alle regole FMI aggiornate.
           </p>
         </div>
 
@@ -288,7 +363,7 @@
               <strong>60 euro</strong>
             </div>
             <img class="tier-image" src="assets/img/tessera-memebri.png?v=4" alt="Tessera FMI Member">
-            <p>Tessera adatta a chi vuole vivere il club, partecipare agli eventi e accedere ai vantaggi FMI.</p>
+            <p>Formula per vivere il motoclub, partecipare agli eventi e accedere ai vantaggi FMI.</p>
             <div class="price-lines">
               <span>40 euro - Tessera Member FMI</span>
               <span>20 euro - Quota associativa Motoclub</span>
@@ -301,7 +376,7 @@
               <strong>140 euro</strong>
             </div>
             <img class="tier-image" src="assets/img/tessere-sport.png?v=4" alt="Tessera FMI Sport">
-            <p>Tessera pensata anche per attivita sportive, allenamenti in impianti omologati e coperture dedicate.</p>
+            <p>Formula pensata per attivita sportive, allenamenti e coperture dedicate.</p>
             <div class="price-lines">
               <span>120 euro - Tessera Sport FMI</span>
               <span>20 euro - Quota associativa Motoclub</span>
@@ -314,7 +389,7 @@
               <strong>55 euro</strong>
             </div>
             <img class="tier-image" src="assets/img/tessera-mini.png?v=4" alt="Tessera FMI Mini Sport">
-            <p>Formula dedicata ai piu giovani secondo le categorie e le regole previste dalla FMI.</p>
+            <p>Formula dedicata ai piu giovani secondo categorie, eta e regole FMI.</p>
             <div class="price-lines">
               <span>35 euro - Tessera Mini Sport FMI</span>
               <span>20 euro - Quota associativa Motoclub</span>
@@ -325,36 +400,88 @@
     </section>
 
     <section>
-      <div class="container two-col">
-        <div class="panel">
-          <span class="eyebrow">Vantaggi Member</span>
-          <h2>Tessera Member</h2>
-          <ul class="check-list">
-            <li>Assistenza stradale, medica, sanitaria e al veicolo.</li>
-            <li>Tutela legale da circolazione.</li>
-            <li>Iscrizione al Registro Storico.</li>
-            <li>Partecipazione all'attivita mototuristica.</li>
-            <li>FedermotoTV, sconti, fiere, riviste e corsi FMI.</li>
-          </ul>
-        </div>
+      <div class="container membership-stack">
+        <article class="membership-row" id="member">
+          <div class="membership-media"><img src="assets/img/tessera-memebri.png?v=4" alt="Tessera FMI Member"></div>
+          <div class="membership-content">
+            <span class="eyebrow">Tessera Member</span>
+            <h2>Tessera Member FMI</h2>
+            <span class="membership-price">Quota indicativa: 60 euro</span>
+            <p>La Tessera Member e pensata per chi vuole vivere il motoclub, partecipare alle iniziative turistiche e accedere ai servizi base FMI.</p>
+            <ul class="feature-list split-list">
+              <li>Assistenza stradale, medica e sanitaria.</li>
+              <li>Tutela legale da circolazione.</li>
+              <li>Registro Storico FMI.</li>
+              <li>Partecipazione ad attivita mototuristica.</li>
+              <li>FedermotoTV e convenzioni dedicate.</li>
+              <li>Accesso alla vita associativa del club.</li>
+            </ul>
+          </div>
+        </article>
 
-        <div class="panel">
-          <span class="eyebrow">Uso sportivo</span>
-          <h2>Tessera Sport</h2>
-          <p>
-            Con la tessera Sport hai copertura assicurativa infortuni e RCT in
-            occasione di allenamenti in impianti, piste e autodromi omologati FMI,
-            secondo le condizioni previste per l'anno sportivo di riferimento.
-          </p>
-          <p class="fine-print">
-            Per il rilascio puo essere richiesto il certificato medico per attivita
-            sportiva non agonistica. Le condizioni definitive vengono sempre
-            confermate tramite canali ufficiali FMI.
-          </p>
-        </div>
+        <article class="membership-row" id="sport">
+          <div class="membership-media"><img src="assets/img/tessere-sport.png?v=4" alt="Tessera FMI Sport"></div>
+          <div class="membership-content">
+            <span class="eyebrow">Tessera Sport</span>
+            <h2>Tessera Sport FMI</h2>
+            <span class="membership-price">Quota indicativa: 140 euro</span>
+            <p>La Tessera Sport e rivolta a chi partecipa ad allenamenti e attivita in piste, autodromi e impianti omologati FMI, con coperture dedicate secondo le condizioni federali.</p>
+            <ul class="feature-list">
+              <li>Copertura infortuni e RCT secondo regolamenti FMI.</li>
+              <li>Utilizzo in allenamenti in impianti omologati.</li>
+              <li>Richiesta del certificato medico quando previsto.</li>
+              <li>Accesso ai vantaggi previsti per i tesserati FMI.</li>
+            </ul>
+            <p class="fine-print">Le condizioni definitive devono sempre essere verificate sui documenti ufficiali FMI dell'anno in corso.</p>
+          </div>
+        </article>
+
+        <article class="membership-row" id="mini-sport">
+          <div class="membership-media"><img src="assets/img/tessera-mini.png?v=4" alt="Tessera FMI Mini Sport"></div>
+          <div class="membership-content">
+            <span class="eyebrow">Mini Sport</span>
+            <h2>Tessera Mini Sport FMI</h2>
+            <span class="membership-price">Quota indicativa: 55 euro</span>
+            <p>La Mini Sport e dedicata ai piu giovani e segue limiti, categorie e requisiti stabiliti dalla Federazione Motociclistica Italiana.</p>
+            <ul class="feature-list">
+              <li>Formula dedicata ai minori secondo regolamento FMI.</li>
+              <li>Gestione con chi esercita la responsabilita genitoriale.</li>
+              <li>Documentazione sanitaria o sportiva se richiesta.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="membership-row" id="licenze">
+          <div class="membership-media"><img src="assets/img/tessera_fmi.png?v=4" alt="Tessera e licenze FMI"></div>
+          <div class="membership-content">
+            <span class="eyebrow">Licenze</span>
+            <h2>Licenze FMI</h2>
+            <p>Per attivita agonistiche o discipline specifiche puo essere necessaria una licenza FMI. Il motoclub ti aiuta a capire quale percorso seguire e quali documenti preparare.</p>
+            <ul class="feature-list">
+              <li>Richiesta subordinata a requisiti, eta e disciplina.</li>
+              <li>Possibile necessita di certificato medico agonistico.</li>
+              <li>Costi e procedure da confermare con FMI e motoclub.</li>
+            </ul>
+            <div class="note-box">Se ti interessa una licenza, seleziona "Licenza FMI" nel modulo e indica nelle note la disciplina o l'attivita che vuoi praticare.</div>
+          </div>
+        </article>
+
+        <article class="membership-row" id="sport-one-day">
+          <div class="membership-media"><img src="assets/img/pista.jpeg" alt="Attivita in pista Unfaired Moto Club"></div>
+          <div class="membership-content">
+            <span class="eyebrow">Giornata singola</span>
+            <h2>Tessera Sport One Day</h2>
+            <p>La Sport One Day e una soluzione per attivita giornaliere quando prevista dal regolamento FMI e dall'organizzazione dell'evento.</p>
+            <ul class="feature-list">
+              <li>Valida per una singola giornata o evento quando disponibile.</li>
+              <li>Da verificare prima dell'iscrizione all'attivita.</li>
+              <li>Coperture e condizioni dipendono dal regolamento applicabile.</li>
+            </ul>
+            <div class="note-box">Per questa opzione compila il modulo: ti confermeremo se e disponibile per l'evento o il track day scelto.</div>
+          </div>
+        </article>
       </div>
     </section>
-
     <section class="highlight-band" id="modulo-iscrizione">
       <div class="container form-wrap">
         <div>
@@ -385,6 +512,8 @@
               <option value="Member FMI">Member FMI</option>
               <option value="Sport FMI">Sport FMI</option>
               <option value="Mini Sport FMI">Mini Sport FMI</option>
+              <option value="Licenza FMI">Licenza FMI</option>
+              <option value="Sport One Day FMI">Sport One Day FMI</option>
             </select>
           </label>
 
@@ -462,24 +591,58 @@
       </div>
     </section>
   </main>
-
   <footer>
-    <div class="container footer-inner">
-      <div>
-        <div class="footer-brand">Unfaired Motoclub Shop ASD</div>
-        <p>Email: <a href="mailto:info@unfairedmotoclub.it">info@unfairedmotoclub.it</a></p>
-        <p>Codice Fiscale 94093110016 - Affiliato FMI: 10373</p>
-        <nav class="footer-links" aria-label="Link sito">
-          <a href="index.html#club">Il Club</a>
-          <a href="iscrizione.html">Iscriviti</a>
-          <a href="events.html">Eventi</a>
-          <a href="organizzazione.html">Organizzazione</a>
-          <a href="shop.html">Shop</a>
-          <a href="affiliazioni-sponsor.html">Sponsor &amp; Affiliazioni</a>
-          <a href="index.html#contatti">Contatti</a>
-        </nav>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-main">
+          <div class="footer-brand">Unfaired Motoclub Shop ASD</div>
+          <p class="footer-copy">Passione per la strada, rispetto per le persone e attenzione ai dati che ci affidi quando ci contatti o partecipi alle attivita del club.</p>
+          <div class="footer-info">
+            <span>Email: <a href="mailto:info@unfairedmotoclub.it">info@unfairedmotoclub.it</a></span>
+            <span>Codice Fiscale 94093110016</span>
+            <span>Affiliato FMI: 10373</span>
+          </div>
+          <nav class="footer-links" aria-label="Link sito">
+            <a href="index.html#chi-siamo">Il Club</a>
+            <a href="iscrizione.html">Iscriviti</a>
+            <a href="events.html">Eventi</a>
+            <a href="organizzazione.html">Organizzazione</a>
+            <a href="shop.html">Shop</a>
+            <a href="affiliazioni-sponsor.html">Sponsor &amp; Affiliazioni</a>
+            <a href="index.html#contatti">Contatti</a>
+          </nav>
+        </div>
+        <div class="footer-meta">
+          <div class="socials">
+            <a href="https://www.instagram.com/unfaired.motoclub/" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="4" width="16" height="16" rx="5"></rect>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M17 7h.01"></path>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/UnfiredMotoclubASD" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v6h3v-6h2l1-3h-3v-1a1 1 0 0 1 1-1h2V8z"></path>
+              </svg>
+            </a>
+            <a href="https://www.federmoto.it/motoclub/unfaired/" aria-label="Federazione Motociclistica Italiana">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z"></path>
+                <path d="M9 12h6"></path>
+                <path d="M12 9v6"></path>
+              </svg>
+            </a>
+          </div>
+          <nav class="footer-legal" aria-label="Link legali">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="cookie-policy.html">Cookie Policy</a>
+            <a href="note-legali.html">Note legali</a>
+            <button type="button" id="cookiePreferences">Cookie</button>
+          </nav>
+          <div>&copy; <span id="year"></span> Unfaired Motoclub Shop ASD. Tutti i diritti riservati.</div>
+        </div>
       </div>
-      <div>&copy; <span id="year"></span> Unfaired Moto Club. Tutti i diritti riservati.</div>
     </div>
   </footer>
 
@@ -487,10 +650,15 @@
     function setMenuOpen(isOpen) {
       const menu = document.getElementById("mainNav");
       const toggle = document.querySelector(".menu-toggle");
+
       menu.classList.toggle("open", isOpen);
+
       if (toggle) {
         toggle.setAttribute("aria-expanded", String(isOpen));
-        toggle.setAttribute("aria-label", isOpen ? "Chiudi menu" : "Apri menu");
+        toggle.setAttribute(
+          "aria-label",
+          isOpen ? "Chiudi menu" : "Apri menu"
+        );
       }
     }
 
@@ -503,12 +671,9 @@
       link.addEventListener("click", () => setMenuOpen(false));
     });
 
-    function field(formData, name) {
-      return String(formData.get(name) || "").trim();
-    }
-
     async function sendMembershipRequest(event) {
       event.preventDefault();
+
       const form = event.target;
       const message = document.getElementById("membershipMessage");
       const button = form.querySelector("button[type='submit']");
@@ -524,28 +689,64 @@
         const response = await fetch(form.action, {
           method: "POST",
           body: payload,
-          headers: { "Accept": "application/json" }
+          headers: {
+            "Accept": "application/json"
+          }
         });
-        const result = await response.json();
+
+        const rawResponse = await response.text();
+
+        if (!rawResponse.trim()) {
+          throw new Error(
+            "Il server ha restituito una risposta vuota. Codice HTTP: " +
+            response.status
+          );
+        }
+
+        let result;
+
+        try {
+          result = JSON.parse(rawResponse);
+        } catch {
+          throw new Error(
+            "Risposta non valida dal server. Codice HTTP: " +
+            response.status +
+            " - " +
+            rawResponse.substring(0, 200)
+          );
+        }
 
         if (!response.ok || !result.success) {
-          throw new Error(result.message || "Non sono riuscito a inviare la richiesta.");
+          throw new Error(
+            result.message || "Non sono riuscito a inviare la richiesta."
+          );
         }
 
         message.style.color = "var(--accent-2)";
-        message.textContent = "Richiesta inviata correttamente. Ti ricontatteremo presto.";
+        message.textContent =
+          result.message ||
+          "Richiesta inviata correttamente. Ti ricontatteremo presto.";
+
         form.reset();
       } catch (error) {
-        message.style.color = "#ff8a65";
-        message.textContent = error.message;
+        message.style.color = "#008080";
+        message.textContent =
+          error instanceof Error
+            ? error.message
+            : "Errore durante l'invio della richiesta.";
       } finally {
         button.disabled = false;
         button.textContent = originalText;
       }
     }
 
-    document.getElementById("membershipForm").addEventListener("submit", sendMembershipRequest);
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document
+      .getElementById("membershipForm")
+      .addEventListener("submit", sendMembershipRequest);
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
+  <script src="assets/js/cookie-notice.js?v=1"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 .main-nav a[href="iscrizione.html"] {
   position: relative;
-  color: #ffe2a8;
-  text-shadow: 0 0 12px rgba(255,176,0,.18);
+  color: #b9eeee;
+  text-shadow: 0 0 12px rgba(0,128,128,.18);
   animation: joinMenuGlow 4.8s ease-in-out infinite;
 }
 
@@ -13,7 +13,7 @@
   bottom: -7px;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, transparent, #ffb000, #ff5a1f, transparent);
+  background: linear-gradient(90deg, transparent, #008080, #008080, transparent);
   opacity: .55;
   transform: scaleX(.58);
   transform-origin: center;
@@ -23,8 +23,8 @@
 .hero-actions a[href="iscrizione.html"] {
   position: relative;
   overflow: hidden;
-  border-color: rgba(255,176,0,.42);
-  box-shadow: 0 0 0 1px rgba(255,176,0,.08), 0 0 24px rgba(255,176,0,.10);
+  border-color: rgba(0,128,128,.42);
+  box-shadow: 0 0 0 1px rgba(0,128,128,.08), 0 0 24px rgba(0,128,128,.10);
   animation: joinButtonPulse 5.2s ease-in-out infinite;
 }
 
@@ -40,8 +40,8 @@
 }
 
 @keyframes joinMenuGlow {
-  0%, 72%, 100% { color: #ffe2a8; text-shadow: 0 0 12px rgba(255,176,0,.18); }
-  36% { color: #fff3cf; text-shadow: 0 0 18px rgba(255,176,0,.34); }
+  0%, 72%, 100% { color: #b9eeee; text-shadow: 0 0 12px rgba(0,128,128,.18); }
+  36% { color: #d9ffff; text-shadow: 0 0 18px rgba(0,128,128,.34); }
 }
 
 @keyframes joinUnderline {
@@ -50,8 +50,8 @@
 }
 
 @keyframes joinButtonPulse {
-  0%, 70%, 100% { box-shadow: 0 0 0 1px rgba(255,176,0,.08), 0 0 24px rgba(255,176,0,.10); }
-  35% { box-shadow: 0 0 0 1px rgba(255,176,0,.26), 0 0 30px rgba(255,176,0,.22); }
+  0%, 70%, 100% { box-shadow: 0 0 0 1px rgba(0,128,128,.08), 0 0 24px rgba(0,128,128,.10); }
+  35% { box-shadow: 0 0 0 1px rgba(0,128,128,.26), 0 0 30px rgba(0,128,128,.22); }
 }
 
 @keyframes joinButtonSheen {

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Storico cronologico di viaggi, eventi e uscite di Unfaired Moto Club con dettagli e foto." />
   <title>Storico eventi - Unfaired Moto Club</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
 
   <!-- SEO START -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -13,7 +14,7 @@
   <meta name="geo.placename" content="Torino, Piemonte" />
   <meta name="geo.position" content="45.0703;7.6869" />
   <meta name="ICBM" content="45.0703, 7.6869" />
-  <meta name="theme-color" content="#090909" />
+  <meta name="theme-color" content="#0B5769" />
   <link rel="canonical" href="https://www.unfairedmotoclub.it/events.html" />
   <meta property="og:locale" content="it_IT" />
   <meta property="og:site_name" content="Unfaired Moto Club" />
@@ -21,29 +22,29 @@
   <meta property="og:title" content="Storico eventi - Unfaired Moto Club" />
   <meta property="og:description" content="Storico cronologico di viaggi, eventi e uscite di Unfaired Moto Club con dettagli e foto." />
   <meta property="og:url" content="https://www.unfairedmotoclub.it/events.html" />
-  <meta property="og:image" content="https://www.unfairedmotoclub.it/assets/img/logo2.jpg" />
+  <meta property="og:image" content="https://www.unfairedmotoclub.it/assets/img/logo.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Storico eventi - Unfaired Moto Club" />
   <meta name="twitter:description" content="Storico cronologico di viaggi, eventi e uscite di Unfaired Moto Club con dettagli e foto." />
-  <meta name="twitter:image" content="https://www.unfairedmotoclub.it/assets/img/logo2.jpg" />
+  <meta name="twitter:image" content="https://www.unfairedmotoclub.it/assets/img/logo.svg" />
   <!-- SEO END -->
   <style>
     :root {
-      --bg: #070707;
+      --bg: #0B5769;
       --panel: #151515;
       --text: #f5f5f5;
       --muted: #b8b8b8;
       --line: rgba(255,255,255,.13);
-      --accent: #ff5a1f;
-      --gold: #ffb000;
-      --accent-2: #ffb000;
+      --accent: #008080;
+      --gold: #008080;
+      --accent-2: #008080;
       --max-width: 1180px;
       --radius: 12px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #050505, #101010);
+      background: linear-gradient(180deg, #0B5769 0%, #083f4d 100%);
       color: var(--text);
       line-height: 1.6;
     }
@@ -77,23 +78,22 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(8,8,8,.78);
+      background: linear-gradient(135deg, rgba(11,87,105,.96) 0%, rgba(8,63,77,.94) 58%, rgba(0,128,128,.84) 100%);
       backdrop-filter: blur(15px);
       border-bottom: 1px solid var(--line);
     }
     .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
     .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: #111;
-      box-shadow: 0 0 28px rgba(255,90,31,.28);
-      border: 1px solid rgba(255,255,255,.16);
-    }
-    .brand span:last-child { font-size: 1rem; }
-    .main-nav { display: flex; align-items: center; gap: 18px; font-size: .95rem; font-weight: 700; }
+      width: clamp(92px, 12vw, 138px);
+      height: 52px;
+      border-radius: 10px;
+      object-fit: contain; padding: 6px 8px;
+      background: rgba(255,255,255,.94);
+      box-shadow: none;
+      border: 1px solid rgba(255,255,255,.72);
+    }
+.main-nav { display: flex; align-items: center; gap: 18px; font-size: .95rem; font-weight: 700; }
     .main-nav a { color: #d8d8d8; transition: .2s ease; }
     .main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--accent-2); }
     .menu-toggle {
@@ -132,7 +132,7 @@
       z-index: -2;
       background:
         linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.58)),
-        url("assets/img/home.png") center/cover no-repeat;
+        url("assets/img/home.jpeg") center/cover no-repeat;
       filter: contrast(1.05);
     }
     .hero::after { content: ""; position: absolute; inset: auto 0 0; height: 160px; z-index: -1; background: linear-gradient(transparent, #101010); }
@@ -158,7 +158,7 @@
       top: 50%;
       height: 10px;
       border-radius: 999px;
-      background: linear-gradient(90deg, transparent, rgba(255,176,0,.22), rgba(255,90,31,.16), transparent);
+      background: linear-gradient(90deg, transparent, rgba(0,128,128,.22), rgba(0,128,128,.16), transparent);
       transform: translateY(-50%);
       filter: blur(10px);
       pointer-events: none;
@@ -217,12 +217,12 @@
     .archive-card:focus-visible,
     .archive-card.is-open {
       --lift: 20px;
-      border-color: rgba(255,176,0,.68);
+      border-color: rgba(0,128,128,.68);
       box-shadow:
         inset 0 1px 0 rgba(255,255,255,.3),
         inset 0 -14px 24px rgba(0,0,0,.45),
         0 26px 48px rgba(0,0,0,.48),
-        0 0 34px rgba(255,176,0,.16);
+        0 0 34px rgba(0,128,128,.16);
     }
     .archive-card:hover,
     .archive-card:focus-within { grid-template-columns: 230px 1fr; }
@@ -287,12 +287,10 @@
       justify-content: center;
       padding: 0 18px;
       border-radius: 999px;
-      border: 1px solid rgba(255,176,0,.6);
+      border: 1px solid rgba(0,128,128,.6);
       color: var(--gold);
       font-weight: 900;
-      white-space: nowrap;
-      background: transparent;
-      cursor: pointer;
+      white-space: nowrap; background: transparent; cursor: pointer;
     }
     .event-preview {
       grid-column: 1 / -1;
@@ -327,8 +325,8 @@
       margin-bottom: 6px;
     }
     .discover-btn {
-      border-color: rgba(255,176,0,.85);
-      background: linear-gradient(135deg, rgba(255,90,31,.92), rgba(255,176,0,.92));
+      border-color: rgba(0,128,128,.85);
+      background: linear-gradient(135deg, rgba(0,128,128,.92), rgba(0,128,128,.92));
       color: #111;
     }
     .empty { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); color: var(--muted); padding: 24px; }
@@ -408,8 +406,8 @@
     .footer-info { display: grid; gap: 4px; margin-bottom: 22px; color: var(--muted); }
     .footer-info a { color: #fff; font-weight: 700; }
     .footer-links, .footer-legal { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; }
-    .footer-links a, .footer-legal a { color: #ddd; transition: .2s ease; }
-    .footer-links a:hover, .footer-legal a:hover, .footer-info a:hover { color: var(--accent-2); }
+    .footer-links a, .footer-legal a, .footer-legal button { color: #ddd; font: inherit; background: none; border: 0; padding: 0; cursor: pointer; transition: .2s ease; }
+    .footer-links a:hover, .footer-legal a:hover, .footer-legal button:hover, .footer-info a:hover { color: var(--accent-2); }
     .footer-meta { display: grid; gap: 14px; justify-items: end; }
     .socials { display: flex; gap: 12px; justify-content: flex-end; }
     .socials a {
@@ -433,7 +431,7 @@
         left: 0;
         width: 100%;
         padding: 24px 4%;
-        background: rgba(8,8,8,.98);
+        background: linear-gradient(135deg, rgba(11,87,105,.98) 0%, rgba(8,63,77,.98) 62%, rgba(0,128,128,.92) 100%);
         border-bottom: 1px solid var(--line);
         display: none;
         flex-direction: column;
@@ -476,14 +474,14 @@
     }
   </style>
   <link rel="stylesheet" href="assets/css/join-attention.css?v=1" />
+  <link rel="stylesheet" href="assets/css/cookie-notice.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Salta al contenuto</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Unfaired Moto Club">
-        <img class="brand-mark" src="assets/img/logo2.jpg" alt="Unfaired Moto Club">
-        <span>Unfaired Moto Club</span>
+        <img class="brand-mark" src="assets/img/logo.svg" alt="Unfaired Moto Club">
       </a>
 
       <button class="menu-toggle" type="button" aria-label="Apri menu" aria-controls="mainNav" aria-expanded="false" onclick="toggleMenu()">
@@ -525,7 +523,6 @@
       </div>
     </div>
   </main>
-
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -538,7 +535,8 @@
             <span>Affiliato FMI: 10373</span>
           </div>
           <nav class="footer-links" aria-label="Link sito">
-            <a href="index.html#club">Il Club</a>
+            <a href="index.html#chi-siamo">Il Club</a>
+            <a href="iscrizione.html">Iscriviti</a>
             <a href="events.html">Eventi</a>
             <a href="organizzazione.html">Organizzazione</a>
             <a href="shop.html">Shop</a>
@@ -572,6 +570,7 @@
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="cookie-policy.html">Cookie Policy</a>
             <a href="note-legali.html">Note legali</a>
+            <button type="button" id="cookiePreferences">Cookie</button>
           </nav>
           <div>&copy; <span id="year"></span> Unfaired Motoclub Shop ASD. Tutti i diritti riservati.</div>
         </div>
@@ -583,7 +582,7 @@
     const siteUrl = "https://www.unfairedmotoclub.it";
 
     function absoluteUrl(path) {
-      if (!path) return `${siteUrl}/assets/img/logo2.jpg`;
+      if (!path) return `${siteUrl}/assets/img/logo.svg`;
       if (/^https?:\/\//i.test(path)) return path;
       return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
     }
@@ -647,7 +646,7 @@
     }
 
     function eventImage(event) {
-      return event.image_url || "assets/img/home.png";
+      return event.image_url || "assets/img/home.jpeg";
     }
 
     function renderComingSoonChain(root) {
@@ -789,5 +788,8 @@
     loadArchive();
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script src="assets/js/cookie-notice.js?v=1"></script>
 </body>
 </html>
+
+

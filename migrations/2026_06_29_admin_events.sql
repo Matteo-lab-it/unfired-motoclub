@@ -34,13 +34,13 @@ CREATE TABLE IF NOT EXISTS event_photos (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO events (title, description, event_date, event_time, location, image_url, is_published)
-SELECT 'Giro delle Alpi', 'Una giornata tra passi di montagna, curve e panorami spettacolari.', '2026-07-12', '08:30:00', 'Torino', 'assets/img/home.png', 1
+SELECT 'Giro delle Alpi', 'Una giornata tra passi di montagna, curve e panorami spettacolari.', '2026-07-12', '08:30:00', 'Torino', 'assets/img/home.jpeg', 1
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Giro delle Alpi');
 
 INSERT INTO events (title, description, event_date, event_time, location, image_url, is_published)
-SELECT 'Unfired Summer Night', 'Serata aperta a tutti con musica, moto, food e nuovi incontri.', '2026-07-26', '19:00:00', 'Club House', 'assets/img/home.png', 1
+SELECT 'Unfired Summer Night', 'Serata aperta a tutti con musica, moto, food e nuovi incontri.', '2026-07-26', '19:00:00', 'Club House', 'assets/img/home.jpeg', 1
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Unfired Summer Night');
 
 INSERT INTO events (title, description, event_date, event_time, location, image_url, is_published)
-SELECT 'Ride for Charity', 'Un motoraduno solidale per sostenere un progetto del territorio.', '2026-09-06', '09:00:00', 'Piemonte', 'assets/img/home.png', 1
+SELECT 'Ride for Charity', 'Un motoraduno solidale per sostenere un progetto del territorio.', '2026-09-06', '09:00:00', 'Piemonte', 'assets/img/home.jpeg', 1
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Ride for Charity');

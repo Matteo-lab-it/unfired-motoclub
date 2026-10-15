@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Scheda evento Unfaired Moto Club con dettagli, percorso, mappa e galleria fotografica." />
   <title>Evento - Unfaired Moto Club</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
 
   <!-- SEO START -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -13,7 +14,7 @@
   <meta name="geo.placename" content="Torino, Piemonte" />
   <meta name="geo.position" content="45.0703;7.6869" />
   <meta name="ICBM" content="45.0703, 7.6869" />
-  <meta name="theme-color" content="#090909" />
+  <meta name="theme-color" content="#0B5769" />
   <link rel="canonical" href="https://www.unfairedmotoclub.it/event.html" />
   <meta property="og:locale" content="it_IT" />
   <meta property="og:site_name" content="Unfaired Moto Club" />
@@ -21,36 +22,35 @@
   <meta property="og:title" content="Evento - Unfaired Moto Club" />
   <meta property="og:description" content="Scheda evento Unfaired Moto Club con dettagli, percorso, mappa e galleria fotografica." />
   <meta property="og:url" content="https://www.unfairedmotoclub.it/event.html" />
-  <meta property="og:image" content="https://www.unfairedmotoclub.it/assets/img/logo2.jpg" />
+  <meta property="og:image" content="https://www.unfairedmotoclub.it/assets/img/logo.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Evento - Unfaired Moto Club" />
   <meta name="twitter:description" content="Scheda evento Unfaired Moto Club con dettagli, percorso, mappa e galleria fotografica." />
-  <meta name="twitter:image" content="https://www.unfairedmotoclub.it/assets/img/logo2.jpg" />
+  <meta name="twitter:image" content="https://www.unfairedmotoclub.it/assets/img/logo.svg" />
   <!-- SEO END -->
   <style>
-    :root { --bg:#090909; --panel:#151515; --text:#f5f5f5; --muted:#b6b6b6; --line:rgba(255,255,255,.12); --accent:#ff5a1f; --accent-2:#ffb000; --max-width:1180px; --radius:18px; }
+    :root { --bg:#0B5769; --panel:#151515; --text:#f5f5f5; --muted:#b6b6b6; --line:rgba(255,255,255,.12); --accent:#008080; --accent-2:#008080; --max-width:1180px; --radius:18px; }
     * { box-sizing:border-box; margin:0; padding:0; }
-    body { font-family:Arial, Helvetica, sans-serif; background:linear-gradient(180deg,#050505,#101010); color:var(--text); line-height:1.6; }
+    body { font-family:Arial, Helvetica, sans-serif; background:linear-gradient(180deg,#0B5769 0%,#083f4d 100%); color:var(--text); line-height:1.6; }
     a { color:inherit; text-decoration:none; }
     .skip-link { position:fixed; top:12px; left:12px; z-index:10000; transform:translateY(-140%); border-radius:999px; background:var(--accent-2); color:#111; padding:10px 16px; font-weight:900; transition:transform .2s ease; }
     .skip-link:focus { transform:translateY(0); }
     a:focus-visible, button:focus-visible { outline:3px solid var(--accent-2); outline-offset:4px; }
     img { max-width:100%; display:block; }
     .container { width:min(92%, var(--max-width)); margin:0 auto; }
-    .site-header { position:fixed; top:0; left:0; width:100%; z-index:1000; background:rgba(8,8,8,.78); backdrop-filter:blur(15px); border-bottom:1px solid var(--line); }
+    .site-header { position:fixed; top:0; left:0; width:100%; z-index:1000; background: linear-gradient(135deg, rgba(11,87,105,.96) 0%, rgba(8,63,77,.94) 58%, rgba(0,128,128,.84) 100%); backdrop-filter:blur(15px); border-bottom: 1px solid var(--line); }
     .header-inner { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
     .brand { display:flex; align-items:center; gap:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
-    .brand-mark { width:42px; height:42px; object-fit:cover; border-radius:50%; background:#111; box-shadow:0 0 28px rgba(255,90,31,.28); border:1px solid rgba(255,255,255,.16); }
-    .brand span:last-child { font-size:1rem; }
-    .main-nav { display:flex; align-items:center; gap:18px; font-size:.95rem; font-weight:700; }
+    .brand-mark { width:clamp(92px,12vw,138px); height:52px; object-fit:contain; padding: 6px 8px; border-radius: 10px; background: rgba(255,255,255,.94); box-shadow:none; border: 1px solid rgba(255,255,255,.72); }
+.main-nav { display:flex; align-items:center; gap:18px; font-size:.95rem; font-weight:700; }
     .main-nav a { color:#d8d8d8; transition:.2s ease; }
     .main-nav a:hover, .main-nav a[aria-current="page"] { color:var(--accent-2); }
     .menu-toggle { display:none; width:44px; height:44px; border:1px solid var(--line); background:rgba(255,255,255,.04); color:#fff; border-radius:12px; cursor:pointer; place-items:center; gap:4px; }
     .menu-toggle span { display:block; width:18px; height:2px; border-radius:999px; background:currentColor; }
     .eyebrow { display:inline-flex; align-items:center; gap:10px; color:var(--accent-2); text-transform:uppercase; letter-spacing:.16em; font-size:.78rem; font-weight:900; }
     .eyebrow::before { content:""; width:28px; height:2px; background:linear-gradient(90deg,var(--accent),var(--accent-2)); }
-    .hero { min-height:720px; display:grid; align-items:end; padding:132px 0 52px; position:relative; isolation:isolate; overflow:hidden; border-bottom:1px solid var(--line); }
-    .hero::before { content:""; position:absolute; inset:-20px 0; z-index:-3; background:linear-gradient(90deg, rgba(0,0,0,.96), rgba(0,0,0,.76) 46%, rgba(0,0,0,.42)), var(--hero-image, url("assets/img/home.png")) center/cover no-repeat; filter:contrast(1.08) saturate(.88); transform:scale(1.03); }
+    .hero { min-height:720px; display:grid; align-items:end; padding:132px 0 52px; position:relative; isolation:isolate; overflow:hidden; border-bottom: 1px solid var(--line); }
+    .hero::before { content:""; position:absolute; inset:-20px 0; z-index:-3; background:linear-gradient(90deg, rgba(0,0,0,.96), rgba(0,0,0,.76) 46%, rgba(0,0,0,.42)), var(--hero-image, url("assets/img/home.jpeg")) center/cover no-repeat; filter:contrast(1.08) saturate(.88); transform:scale(1.03); }
     .hero::after { content:""; position:absolute; inset:auto 0 0; height:260px; z-index:-2; background:linear-gradient(transparent,#101010); }
     .hero-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,420px); gap:42px; align-items:end; }
     .hero-copy { min-width:0; }
@@ -64,12 +64,12 @@
     .hero-plate::before, .hero-plate::after { content:""; position:absolute; top:28px; width:20px; height:20px; border-radius:50%; background:radial-gradient(circle at 35% 30%,#f1f1f1,#6a6a6a 48%,#151515 72%); box-shadow:0 8px 16px rgba(0,0,0,.45); z-index:2; }
     .hero-plate::before { left:28px; }
     .hero-plate::after { right:28px; }
-    .hero-photo { height:100%; min-height:402px; border-radius:16px; border:1px solid rgba(255,255,255,.16); background:var(--hero-image, url("assets/img/home.png")) center/cover no-repeat; box-shadow:inset 0 -90px 70px rgba(0,0,0,.62); }
+    .hero-photo { height:100%; min-height:402px; border-radius:16px; border:1px solid rgba(255,255,255,.16); background:var(--hero-image, url("assets/img/home.jpeg")) center/cover no-repeat; box-shadow:inset 0 -90px 70px rgba(0,0,0,.62); }
     .hero-stamp { position:absolute; left:28px; right:28px; bottom:28px; padding:18px; border:1px solid var(--line); border-radius:14px; background:rgba(6,6,6,.82); backdrop-filter:blur(12px); }
     .hero-stamp strong { display:block; color:#fff; font-size:1.35rem; line-height:1.05; text-transform:uppercase; }
     .hero-stamp span { color:var(--muted); font-weight:800; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 20px; border-radius:999px; border:1px solid rgba(255,176,0,.68); color:#111; background:linear-gradient(135deg,var(--accent),var(--accent-2)); font-weight:900; cursor:pointer; transition:.22s ease; }
-    .btn:hover { transform:translateY(-2px); box-shadow:0 14px 34px rgba(255,90,31,.22); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 20px; border-radius:999px; border:1px solid rgba(0,128,128,.68); color:#111; background:linear-gradient(135deg,var(--accent),var(--accent-2)); font-weight:900; cursor:pointer; transition:.22s ease; }
+    .btn:hover { transform:translateY(-2px); box-shadow:0 14px 34px rgba(0,128,128,.22); }
     section { padding:78px 0; }
     .event-band { background:linear-gradient(180deg,rgba(255,255,255,.02),transparent),#101010; }
     .layout { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr); gap:28px; align-items:start; }
@@ -82,8 +82,8 @@
     .route-track { position:relative; margin:28px 0 24px; min-height:154px; border-left:4px solid #2a2a2a; padding:10px 0 10px 28px; }
     .route-track::before { content:""; position:absolute; left:-4px; top:18px; width:4px; height:70%; background:repeating-linear-gradient(180deg,var(--accent-2) 0 18px,transparent 18px 32px); }
     .route-stop { position:relative; display:block; margin-bottom:18px; padding:14px 16px; border:1px solid rgba(255,255,255,.11); border-radius:12px; background:rgba(255,255,255,.035); color:inherit; text-decoration:none; transition:.2s ease; }
-    .route-stop:hover { border-color:rgba(255,176,0,.45); background:rgba(255,176,0,.055); transform:translateX(3px); }
-    .route-stop::before { content:""; position:absolute; left:-41px; top:2px; width:22px; height:22px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:0 0 0 8px rgba(255,176,0,.12); }
+    .route-stop:hover { border-color:rgba(0,128,128,.45); background:rgba(0,128,128,.055); transform:translateX(3px); }
+    .route-stop::before { content:""; position:absolute; left:-41px; top:2px; width:22px; height:22px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:0 0 0 8px rgba(0,128,128,.12); }
     .route-stop strong { display:block; color:#fff; text-transform:uppercase; letter-spacing:.08em; font-size:.82rem; }
     .route-stop span { display:block; margin-top:3px; }
     .route-map-label { display:inline-flex !important; width:fit-content; margin-top:10px !important; color:var(--accent-2) !important; font-size:.78rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
@@ -95,7 +95,7 @@
     .photo:first-child { grid-column:span 2; aspect-ratio:16/9; }
     .empty { color:var(--muted); border:1px dashed var(--line); border-radius:12px; padding:22px; background:rgba(255,255,255,.03); }
     .loading { padding:140px 0; color:var(--muted); }
-    .join-panel { border-color:rgba(255,176,0,.32); background:linear-gradient(135deg,rgba(255,90,31,.08),transparent 35%),linear-gradient(180deg,#1b1b1b,#111); }
+    .join-panel { border-color:rgba(0,128,128,.32); background:linear-gradient(135deg,rgba(0,128,128,.08),transparent 35%),linear-gradient(180deg,#1b1b1b,#111); }
     .join-form { display:grid; gap:14px; margin-top:20px; }
     .join-form label { display:grid; gap:7px; color:var(--muted); font-size:.92rem; font-weight:900; text-transform:uppercase; letter-spacing:.05em; }
     .join-form input { width:100%; min-height:48px; border:1px solid var(--line); border-radius:10px; background:#0d0d0d; color:#fff; padding:0 13px; font:inherit; }
@@ -112,8 +112,8 @@
     .footer-info { display:grid; gap:4px; margin-bottom:22px; color:var(--muted); }
     .footer-info a { color:#fff; font-weight:700; }
     .footer-links, .footer-legal { display:flex; flex-wrap:wrap; gap:14px 20px; align-items:center; }
-    .footer-links a, .footer-legal a { color:#ddd; transition:.2s ease; }
-    .footer-links a:hover, .footer-legal a:hover, .footer-info a:hover { color:var(--accent-2); }
+    .footer-links a, .footer-legal a, .footer-legal button { color:#ddd; font:inherit; background:none; border:0; padding:0; cursor:pointer; transition:.2s ease; }
+    .footer-links a:hover, .footer-legal a:hover, .footer-legal button:hover, .footer-info a:hover { color:var(--accent-2); }
     .footer-meta { display:grid; gap:14px; justify-items:end; }
     .socials { display:flex; gap:12px; justify-content:flex-end; }
     .socials a { min-width:42px; height:42px; padding:0 12px; display:grid; place-items:center; border-radius:12px; border:1px solid var(--line); color:#fff; transition:.2s ease; }
@@ -121,7 +121,7 @@
     .socials a:hover { border-color:var(--accent); color:var(--accent-2); }
     @media (max-width: 1120px) {
       .menu-toggle { display:grid; }
-      .main-nav { position:absolute; top:76px; left:0; width:100%; padding:24px 4%; background:rgba(8,8,8,.98); border-bottom:1px solid var(--line); display:none; flex-direction:column; align-items:flex-start; }
+      .main-nav { position:absolute; top:76px; left:0; width:100%; padding:24px 4%; background: linear-gradient(135deg, rgba(11,87,105,.98) 0%, rgba(8,63,77,.98) 62%, rgba(0,128,128,.92) 100%); border-bottom: 1px solid var(--line); display:none; flex-direction:column; align-items:flex-start; }
       .main-nav.open { display:flex; }
     }
     @media (max-width: 980px) { .hero { min-height:auto; padding-top:128px; } .hero-grid, .layout { grid-template-columns:1fr; } .hero-plate { transform:none; min-height:320px; } .hero-photo { min-height:320px; } .meta-rail { grid-template-columns:repeat(2,minmax(0,1fr)); } .gallery-panel { grid-row:auto; } }
@@ -129,14 +129,14 @@
     @media (max-width: 560px) { .hero h1 { font-size:clamp(2.5rem,13vw,3.5rem); line-height:.96; } .meta-rail { grid-template-columns:1fr; } .panel { padding:22px; } }
   </style>
   <link rel="stylesheet" href="assets/css/join-attention.css?v=1" />
+  <link rel="stylesheet" href="assets/css/cookie-notice.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#app">Salta al contenuto</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Unfaired Moto Club">
-        <img class="brand-mark" src="assets/img/logo2.jpg" alt="Unfaired Moto Club">
-        <span>Unfaired Moto Club</span>
+        <img class="brand-mark" src="assets/img/logo.svg" alt="Unfaired Moto Club">
       </a>
 
       <button class="menu-toggle" type="button" aria-label="Apri menu" aria-controls="mainNav" aria-expanded="false" onclick="toggleMenu()">
@@ -159,7 +159,6 @@
   <main id="app">
     <div class="container loading">Caricamento evento...</div>
   </main>
-
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -172,7 +171,8 @@
             <span>Affiliato FMI: 10373</span>
           </div>
           <nav class="footer-links" aria-label="Link sito">
-            <a href="index.html#club">Il Club</a>
+            <a href="index.html#chi-siamo">Il Club</a>
+            <a href="iscrizione.html">Iscriviti</a>
             <a href="events.html">Eventi</a>
             <a href="organizzazione.html">Organizzazione</a>
             <a href="shop.html">Shop</a>
@@ -206,6 +206,7 @@
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="cookie-policy.html">Cookie Policy</a>
             <a href="note-legali.html">Note legali</a>
+            <button type="button" id="cookiePreferences">Cookie</button>
           </nav>
           <div>&copy; <span id="year"></span> Unfaired Motoclub Shop ASD. Tutti i diritti riservati.</div>
         </div>
@@ -254,7 +255,7 @@
     }
 
     function absoluteUrl(path) {
-      if (!path) return `${siteUrl}/assets/img/logo2.jpg`;
+      if (!path) return `${siteUrl}/assets/img/logo.svg`;
       if (/^https?:\/\//i.test(path)) return path;
       return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
     }
@@ -370,7 +371,7 @@
         const event = result.event;
         const photos = result.photos || [];
         const routeStops = result.route_stops || [];
-        const image = publicPath(event.image_url) || "assets/img/home.png";
+        const image = publicPath(event.image_url) || "assets/img/home.jpeg";
         const time = String(event.event_time || "").slice(0, 5);
         const canonicalUrl = `${siteUrl}/event.html?id=${encodeURIComponent(event.id)}`;
         document.title = `${event.title} - Unfaired Moto Club`;
@@ -506,5 +507,8 @@
     loadEvent();
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script src="assets/js/cookie-notice.js?v=1"></script>
 </body>
 </html>
+
+

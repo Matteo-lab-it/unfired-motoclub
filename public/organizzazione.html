@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Organizzazione e referenti ufficiali di Unfaired Moto Club ASD." />
   <title>Organizzazione - Unfaired Moto Club</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
 
   <!-- SEO START -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -13,7 +14,7 @@
   <meta name="geo.placename" content="Torino, Piemonte" />
   <meta name="geo.position" content="45.0703;7.6869" />
   <meta name="ICBM" content="45.0703, 7.6869" />
-  <meta name="theme-color" content="#090909" />
+  <meta name="theme-color" content="#0B5769" />
   <link rel="canonical" href="https://www.unfairedmotoclub.it/organizzazione.html" />
   <meta property="og:locale" content="it_IT" />
   <meta property="og:site_name" content="Unfaired Moto Club" />
@@ -21,22 +22,22 @@
   <meta property="og:title" content="Organizzazione - Unfaired Moto Club" />
   <meta property="og:description" content="Organizzazione e referenti ufficiali di Unfaired Moto Club ASD." />
   <meta property="og:url" content="https://www.unfairedmotoclub.it/organizzazione.html" />
-  <meta property="og:image" content="https://www.unfairedmotoclub.it/assets/img/logo2.jpg" />
+  <meta property="og:image" content="https://www.unfairedmotoclub.it/assets/img/logo.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Organizzazione - Unfaired Moto Club" />
   <meta name="twitter:description" content="Organizzazione e referenti ufficiali di Unfaired Moto Club ASD." />
-  <meta name="twitter:image" content="https://www.unfairedmotoclub.it/assets/img/logo2.jpg" />
+  <meta name="twitter:image" content="https://www.unfairedmotoclub.it/assets/img/logo.svg" />
   <!-- SEO END -->
 
   <style>
     :root {
-      --bg: #090909;
+      --bg: #0B5769;
       --card: #181818;
       --text: #f5f5f5;
       --muted: #b6b6b6;
       --line: rgba(255,255,255,.10);
-      --accent: #ff5a1f;
-      --accent-2: #ffb000;
+      --accent: #008080;
+      --accent-2: #008080;
       --max-width: 1180px;
       --radius: 18px;
       --shadow: 0 18px 50px rgba(0,0,0,.35);
@@ -47,8 +48,8 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 78% 12%, rgba(255,90,31,.14), transparent 25%),
-        linear-gradient(180deg, #070707 0%, #0d0d0d 100%);
+        radial-gradient(circle at 78% 12%, rgba(0,128,128,.14), transparent 25%),
+        linear-gradient(180deg, #0B5769 0%, #083f4d 100%);
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
@@ -91,7 +92,7 @@
     .btn-primary {
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
       color: #111;
-      box-shadow: 0 10px 30px rgba(255,90,31,.25);
+      box-shadow: 0 10px 30px rgba(0,128,128,.25);
     }
     .btn-secondary { border-color: var(--line); background: rgba(255,255,255,.04); }
     .btn:hover { transform: translateY(-2px); }
@@ -102,7 +103,7 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(8,8,8,.78);
+      background: linear-gradient(135deg, rgba(11,87,105,.96) 0%, rgba(8,63,77,.94) 58%, rgba(0,128,128,.84) 100%);
       backdrop-filter: blur(15px);
       border-bottom: 1px solid var(--line);
     }
@@ -122,15 +123,14 @@
       text-transform: uppercase;
     }
     .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: #111;
-      box-shadow: 0 0 28px rgba(255,90,31,.28);
-      border: 1px solid rgba(255,255,255,.16);
-    }
-    .main-nav {
+      width: clamp(92px, 12vw, 138px);
+      height: 52px;
+      border-radius: 10px;
+      object-fit: contain; padding: 6px 8px;
+      background: rgba(255,255,255,.94);
+      box-shadow: none;
+      border: 1px solid rgba(255,255,255,.72);
+    }.main-nav {
       display: flex;
       align-items: center;
       gap: 18px;
@@ -167,7 +167,7 @@
       background:
         linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.46)),
         linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.84)),
-        url("assets/img/corpo1.png?v=202607010910") center/cover no-repeat;
+        url("assets/img/gruppo 1.jpeg") center/cover no-repeat;
       border-bottom: 1px solid var(--line);
     }
     .eyebrow {
@@ -202,6 +202,26 @@
     }
 
     section { padding: 86px 0; }
+    #referenti {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(0,128,128,.18), transparent 28%),
+        radial-gradient(circle at 86% 48%, rgba(255,255,255,.08), transparent 24%),
+        linear-gradient(180deg, rgba(11,87,105,.10), transparent 18%, rgba(0,0,0,.18));
+    }
+    #referenti::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, transparent 0 48px, rgba(255,255,255,.035) 49px 50px, transparent 51px 100%),
+        linear-gradient(180deg, rgba(255,255,255,.028), transparent 22%, transparent 78%, rgba(0,128,128,.045));
+      background-size: 96px 100%, 100% 100%;
+      pointer-events: none;
+      opacity: .55;
+    }
+    #referenti > .container { position: relative; z-index: 1; }
     .section-head {
       display: flex;
       justify-content: space-between;
@@ -213,10 +233,11 @@
     .section-head p { color: var(--muted); max-width: 650px; }
     .role-count {
       color: var(--muted);
-      border: 1px solid var(--line);
+      border: 1px solid rgba(0,128,128,.30);
       border-radius: 999px;
       padding: 8px 14px;
       white-space: nowrap;
+      background: rgba(0,128,128,.08);
     }
     .org-chart {
       position: relative;
@@ -226,7 +247,15 @@
       counter-reset: role;
       perspective: 1400px;
       transform-style: preserve-3d;
-      padding: 18px 0 26px;
+      padding: 34px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.30), rgba(0,0,0,.62)),
+        linear-gradient(90deg, rgba(11,87,105,.82), rgba(0,128,128,.42)),
+        url("assets/img/home.jpeg") center/cover no-repeat;
+      box-shadow: 0 34px 90px rgba(0,0,0,.34);
+      overflow: hidden;
     }
     .org-chart::before {
       content: "";
@@ -239,14 +268,14 @@
       transform-style: preserve-3d;
       border-radius: 999px;
       background:
-        radial-gradient(circle at 24px 18px, rgba(255,176,0,.95) 0 4px, transparent 5px),
-        radial-gradient(circle at 94px 48px, rgba(255,90,31,.95) 0 4px, transparent 5px),
+        radial-gradient(circle at 24px 18px, rgba(0,128,128,.95) 0 4px, transparent 5px),
+        radial-gradient(circle at 94px 48px, rgba(0,128,128,.95) 0 4px, transparent 5px),
         linear-gradient(90deg, transparent 0 47%, rgba(255,255,255,.20) 48% 52%, transparent 53%),
-        repeating-linear-gradient(180deg, transparent 0 34px, rgba(255,176,0,.24) 35px 37px, transparent 38px 70px);
+        repeating-linear-gradient(180deg, transparent 0 34px, rgba(0,128,128,.24) 35px 37px, transparent 38px 70px);
       background-size: 118px 70px, 118px 70px, 100% 100%, 100% 70px;
       box-shadow:
-        inset 0 0 30px rgba(255,176,0,.06),
-        0 0 42px rgba(255,90,31,.14);
+        inset 0 0 30px rgba(0,128,128,.06),
+        0 0 42px rgba(0,128,128,.14);
       pointer-events: none;
       z-index: -1;
       animation: dnaSpin 7.5s linear infinite, chartGlow 4.8s ease-in-out infinite;
@@ -262,7 +291,7 @@
       transform: translateX(-50%);
       border-radius: 999px;
       background: linear-gradient(180deg, transparent, var(--accent-2), var(--accent), transparent);
-      box-shadow: 0 0 26px rgba(255,176,0,.38);
+      box-shadow: 0 0 26px rgba(0,128,128,.38);
       pointer-events: none;
       z-index: -2;
     }
@@ -272,22 +301,52 @@
       gap: 26px;
       transform-style: preserve-3d;
     }
-    .org-level--top,
-    .org-level--second,
-    .org-level--team { grid-template-columns: 1fr; }
+    .org-level--top { grid-template-columns: 1fr; }
+    .org-level--board {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+    }
+    .org-level--proposals {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      margin-top: 10px;
+    }
+    .org-level--board .role-card,
+    .org-level--proposals .role-card {
+      --dna-x: 0px;
+      --dna-angle: 0deg;
+    }
+    .org-section-label {
+      justify-self: start;
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,128,128,.32);
+      background: rgba(0,128,128,.14);
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
     .role-card {
       position: relative;
-      width: min(100%, 430px);
+      width: 100%;
       min-height: 100%;
       display: grid;
-      grid-template-columns: 74px 1fr;
+      grid-template-columns: 88px 1fr;
       gap: 18px;
       align-items: start;
-      padding: 22px;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, #1b1b1b, #141414);
-      box-shadow: var(--shadow);
+      padding: 24px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.15);
+      background:
+        radial-gradient(circle at 14% 12%, rgba(0,128,128,.26), transparent 35%),
+        linear-gradient(145deg, rgba(28,28,28,.94), rgba(11,87,105,.42)),
+        rgba(14,14,14,.92);
+      box-shadow: 0 22px 58px rgba(0,0,0,.38);
       overflow: hidden;
       opacity: 0;
       transform:
@@ -305,7 +364,7 @@
       position: absolute;
       inset: 0;
       z-index: 0;
-      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.09) 44%, transparent 74%);
+      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.14) 44%, transparent 74%);
       transform: translateX(-120%);
       animation: cardSheen 5.8s ease-in-out infinite;
       animation-delay: calc(var(--delay, 0s) + 1.2s);
@@ -320,8 +379,14 @@
       background: linear-gradient(90deg, var(--accent), var(--accent-2));
       opacity: .78;
     }
+    .org-level--proposals .role-card {
+      border-color: rgba(0,128,128,.28);
+      background:
+        radial-gradient(circle at 18% 12%, rgba(0,128,128,.30), transparent 36%),
+        linear-gradient(145deg, rgba(12,12,12,.94), rgba(0,128,128,.24));
+    }
     .role-card:hover {
-      border-color: rgba(255,176,0,.42);
+      border-color: rgba(0,128,128,.42);
       transform:
         translate3d(var(--dna-x, 0), -5px, 96px)
         rotateY(var(--dna-angle, 0deg))
@@ -332,11 +397,13 @@
     .org-chart:hover::before { animation-play-state: paused; }
     .role-card--lead {
       max-width: 560px;
-      grid-template-columns: 92px 1fr;
-      border-color: rgba(255,176,0,.34);
+      grid-template-columns: 112px 1fr;
+      border-color: rgba(0,128,128,.34);
       background:
-        radial-gradient(circle at 82% 12%, rgba(255,90,31,.20), transparent 34%),
-        linear-gradient(180deg, #202020, #141414);
+        radial-gradient(circle at 82% 12%, rgba(0,128,128,.34), transparent 34%),
+        linear-gradient(135deg, rgba(255,255,255,.08), transparent 42%),
+        linear-gradient(180deg, rgba(32,32,32,.96), rgba(11,87,105,.42));
+      box-shadow: 0 30px 80px rgba(0,0,0,.46), 0 0 44px rgba(0,128,128,.12);
     }
     .role-card--left {
       justify-self: center;
@@ -356,22 +423,37 @@
     .role-mark {
       position: relative;
       z-index: 1;
-      width: 74px;
-      height: 74px;
+      width: 88px;
+      height: 88px;
       display: grid;
       place-items: center;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.24);
       background:
-        linear-gradient(135deg, rgba(255,90,31,.20), rgba(255,176,0,.08)),
+        linear-gradient(135deg, rgba(0,128,128,.20), rgba(0,128,128,.08)),
         #111;
       color: var(--accent-2);
       font-size: 1.1rem;
       font-weight: 900;
       letter-spacing: .04em;
       text-transform: uppercase;
+      isolation: isolate;
+      box-shadow:
+        0 0 0 7px rgba(0,128,128,.12),
+        0 16px 36px rgba(0,0,0,.44);
     }
-    .role-card--lead .role-mark { width: 92px; height: 92px; }
+    .role-mark::before {
+      content: "";
+      position: absolute;
+      inset: -12px;
+      z-index: -1;
+      border-radius: 50%;
+      background:
+        repeating-conic-gradient(from 8deg, rgba(0,128,128,.42) 0 10deg, transparent 10deg 24deg);
+      opacity: .72;
+      transform: rotate(8deg);
+    }
+    .role-card--lead .role-mark { width: 122px; height: 122px; }
     .role-mark svg {
       width: 38px;
       height: 38px;
@@ -387,7 +469,9 @@
       object-fit: cover;
       border-radius: inherit;
     }
-    .role-card h3 { font-size: 1.35rem; line-height: 1.2; margin-bottom: 4px; }
+    .role-photo--circle,
+    .role-card--lead .role-photo { border-radius: 50%; }
+    .role-card h3 { font-size: 1.42rem; line-height: 1.2; margin-bottom: 5px; }
     .role-title {
       display: inline-flex;
       margin-bottom: 14px;
@@ -404,9 +488,9 @@
       width: min(82%, 760px);
       height: 32px;
       justify-self: center;
-      border-left: 1px solid rgba(255,176,0,.34);
-      border-right: 1px solid rgba(255,176,0,.34);
-      border-top: 1px solid rgba(255,176,0,.34);
+      border-left: 1px solid rgba(0,128,128,.34);
+      border-right: 1px solid rgba(0,128,128,.34);
+      border-top: 1px solid rgba(0,128,128,.34);
       border-radius: 26px 26px 0 0;
       opacity: 0;
       transform: scaleX(.72);
@@ -478,8 +562,8 @@
       56%, 100% { transform: translateX(120%); }
     }
     @keyframes chartGlow {
-      0%, 100% { opacity: .45; filter: drop-shadow(0 0 0 rgba(255,176,0,0)); }
-      50% { opacity: .8; filter: drop-shadow(0 0 18px rgba(255,176,0,.16)); }
+      0%, 100% { opacity: .45; filter: drop-shadow(0 0 0 rgba(0,128,128,0)); }
+      50% { opacity: .8; filter: drop-shadow(0 0 18px rgba(0,128,128,.16)); }
     }
     @keyframes mobileSpark {
       0% { opacity: 0; transform: translate3d(-18px, 18px, 0) scale(.8); }
@@ -548,9 +632,9 @@
       gap: 28px;
       padding: 36px;
       border-radius: var(--radius);
-      border: 1px solid rgba(255,90,31,.28);
+      border: 1px solid rgba(0,128,128,.28);
       background:
-        linear-gradient(135deg, rgba(255,90,31,.16), rgba(255,176,0,.08)),
+        linear-gradient(135deg, rgba(0,128,128,.16), rgba(0,128,128,.08)),
         #111;
       box-shadow: var(--shadow);
     }
@@ -579,8 +663,8 @@
     .footer-info { display: grid; gap: 4px; margin-bottom: 22px; color: var(--muted); }
     .footer-info a { color: #fff; font-weight: 700; }
     .footer-links, .footer-legal { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; }
-    .footer-links a, .footer-legal a { color: #ddd; transition: .2s ease; }
-    .footer-links a:hover, .footer-legal a:hover, .footer-info a:hover { color: var(--accent-2); }
+    .footer-links a, .footer-legal a, .footer-legal button { color: #ddd; font: inherit; background: none; border: 0; padding: 0; cursor: pointer; transition: .2s ease; }
+    .footer-links a:hover, .footer-legal a:hover, .footer-legal button:hover, .footer-info a:hover { color: var(--accent-2); }
     .footer-meta { display: grid; gap: 14px; justify-items: end; }
     .socials { display: flex; gap: 12px; justify-content: flex-end; }
     .socials a {
@@ -605,7 +689,7 @@
         left: 0;
         width: 100%;
         padding: 24px 4%;
-        background: rgba(8,8,8,.98);
+        background: linear-gradient(135deg, rgba(11,87,105,.98) 0%, rgba(8,63,77,.98) 62%, rgba(0,128,128,.92) 100%);
         border-bottom: 1px solid var(--line);
         display: none;
         flex-direction: column;
@@ -615,7 +699,7 @@
       .section-head, .cta-box { align-items: flex-start; flex-direction: column; }
       .org-chart {
         perspective: 1000px;
-        padding-inline: 0;
+        padding: 28px;
       }
       .org-chart::before {
         width: 88px;
@@ -644,9 +728,9 @@
         position: relative;
         padding: 76px 0 82px;
         background:
-          radial-gradient(circle at 16% 12%, rgba(255,176,0,.16), transparent 28%),
-          radial-gradient(circle at 88% 36%, rgba(255,90,31,.13), transparent 30%),
-          linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,90,31,.035));
+          radial-gradient(circle at 16% 12%, rgba(0,128,128,.16), transparent 28%),
+          radial-gradient(circle at 88% 36%, rgba(0,128,128,.13), transparent 30%),
+          linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,128,128,.035));
         overflow: hidden;
       }
       #referenti::before,
@@ -661,8 +745,8 @@
         height: 210px;
         right: -122px;
         top: 118px;
-        border: 1px solid rgba(255,176,0,.20);
-        box-shadow: inset 0 0 40px rgba(255,176,0,.07), 0 0 46px rgba(255,90,31,.10);
+        border: 1px solid rgba(0,128,128,.20);
+        box-shadow: inset 0 0 40px rgba(0,128,128,.07), 0 0 46px rgba(0,128,128,.10);
       }
       #referenti::after {
         width: 8px;
@@ -671,8 +755,8 @@
         bottom: 18%;
         background: var(--accent-2);
         box-shadow:
-          42px -188px 0 -2px rgba(255,90,31,.82),
-          238px -72px 0 -3px rgba(255,176,0,.72),
+          42px -188px 0 -2px rgba(0,128,128,.82),
+          238px -72px 0 -3px rgba(0,128,128,.72),
           172px 34px 0 -3px rgba(255,255,255,.62);
         animation: mobileSpark 4.4s ease-in-out infinite;
       }
@@ -687,14 +771,15 @@
         overflow-wrap: anywhere;
       }
       .role-count {
-        border-color: rgba(255,176,0,.30);
-        background: rgba(255,176,0,.08);
-        box-shadow: 0 0 24px rgba(255,176,0,.08);
+        border-color: rgba(0,128,128,.30);
+        background: rgba(0,128,128,.08);
+        box-shadow: 0 0 24px rgba(0,128,128,.08);
       }
       .org-chart {
         gap: 18px;
-        padding: 6px 4px 0 14px;
+        padding: 22px 12px 24px 24px;
         perspective: none;
+        border-radius: 22px;
       }
       .org-chart::before { display: none; }
       .org-chart::after {
@@ -706,10 +791,16 @@
         width: 2px;
         border-radius: 999px;
         background: linear-gradient(180deg, transparent, var(--accent-2) 12%, var(--accent) 50%, transparent);
-        box-shadow: 0 0 18px rgba(255,176,0,.34);
+        box-shadow: 0 0 18px rgba(0,128,128,.34);
         z-index: -1;
       }
       .org-level { gap: 18px; }
+      .org-section-label {
+        min-height: 34px;
+        padding: 0 13px;
+        font-size: .68rem;
+        letter-spacing: .10em;
+      }
       .role-card,
       .role-card--lead {
         grid-template-columns: 74px minmax(0, 1fr);
@@ -724,8 +815,9 @@
         padding: 16px 16px 17px;
         border-radius: 16px;
         background:
-          linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.025)),
-          linear-gradient(180deg, #1c1c1c, #101010);
+          radial-gradient(circle at 14% 12%, rgba(0,128,128,.22), transparent 34%),
+          linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.028)),
+          linear-gradient(180deg, rgba(28,28,28,.96), rgba(11,87,105,.24));
         box-shadow: 0 16px 38px rgba(0,0,0,.38), 0 0 0 1px rgba(255,255,255,.02);
         overflow: visible;
         opacity: 0;
@@ -741,7 +833,7 @@
       .role-card:nth-of-type(even) {
         transform-origin: right center;
         background:
-          radial-gradient(circle at 100% 0%, rgba(255,176,0,.14), transparent 34%),
+          radial-gradient(circle at 100% 0%, rgba(0,128,128,.14), transparent 34%),
           linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.025)),
           linear-gradient(180deg, #1b1b1b, #101010);
       }
@@ -750,7 +842,7 @@
         border-radius: inherit;
         background:
           linear-gradient(120deg, transparent 0%, rgba(255,255,255,.14) 38%, transparent 64%),
-          radial-gradient(circle at 22px 18px, rgba(255,176,0,.26), transparent 18px);
+          radial-gradient(circle at 22px 18px, rgba(0,128,128,.26), transparent 18px);
       }
       .role-card::after {
         inset: 14px auto auto -24px;
@@ -759,18 +851,18 @@
         display: grid;
         place-items: center;
         border-radius: 50%;
-        border: 1px solid rgba(255,176,0,.34);
+        border: 1px solid rgba(0,128,128,.34);
         background:
           url("assets/img/moto_stilizzata.svg") center/30px auto no-repeat,
           #111;
         color: var(--accent-2);
-        box-shadow: 0 0 0 6px rgba(9,9,9,.9), 0 0 22px rgba(255,176,0,.26);
+        box-shadow: 0 0 0 6px rgba(9,9,9,.9), 0 0 22px rgba(0,128,128,.26);
         content: "";
         z-index: 2;
       }
       .role-card--lead {
         min-height: 132px;
-        border-color: rgba(255,176,0,.46);
+        border-color: rgba(0,128,128,.46);
       }
       .role-card--lead::after { top: 20px; }
       .role-mark,
@@ -779,9 +871,9 @@
         height: 74px;
         border-radius: 50%;
         box-shadow:
-          0 0 0 4px rgba(255,176,0,.08),
+          0 0 0 4px rgba(0,128,128,.08),
           0 12px 28px rgba(0,0,0,.38),
-          inset 0 0 22px rgba(255,176,0,.08);
+          inset 0 0 22px rgba(0,128,128,.08);
       }
       .role-card h3 {
         font-size: 1.18rem;
@@ -798,7 +890,7 @@
         font-size: .92rem;
         line-height: 1.45;
       }
-      .org-level--second, .org-level--team { grid-template-columns: 1fr; }
+      .org-level--board, .org-level--proposals { grid-template-columns: 1fr; }
       .org-connector { display: none; }
       .info-panel, .cta-box { padding: 24px; }
       .footer-inner { grid-template-columns: 1fr; }
@@ -816,6 +908,7 @@
   </style>
   <link rel="stylesheet" href="assets/css/moto-background.css?v=1">
   <link rel="stylesheet" href="assets/css/join-attention.css?v=1">
+  <link rel="stylesheet" href="assets/css/cookie-notice.css?v=1">
 </head>
 
 <body>
@@ -823,8 +916,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Unfaired Moto Club">
-        <img class="brand-mark" src="assets/img/logo2.jpg" alt="Unfaired Moto Club">
-        <span>Unfaired Moto Club</span>
+        <img class="brand-mark" src="assets/img/logo.svg" alt="Unfaired Moto Club">
       </a>
 
       <button class="menu-toggle" type="button" aria-label="Apri menu" aria-controls="mainNav" aria-expanded="false" onclick="toggleMenu()">
@@ -868,14 +960,16 @@
               che tengono in movimento Unfaired Moto Club.
             </p>
           </div>
-          <span class="role-count">8 persone</span>
+          <span class="role-count">10 persone</span>
         </div>
 
         <div class="org-chart" aria-label="Organigramma Unfaired Moto Club">
+          <span class="org-section-label">Membri attuali</span>
+
           <div class="org-level org-level--top">
           <article class="role-card role-card--lead role-card--center" style="--delay: .05s">
             <div class="role-mark">
-              <img class="role-photo" src="assets/img/denis.jpeg" alt="Denis">
+              <img class="role-photo role-photo--circle" src="assets/img/direttivo-denis.jpg" alt="Denis">
             </div>
             <div>
               <h3>Denis</h3>
@@ -889,85 +983,124 @@
 
           <div class="org-connector" aria-hidden="true"></div>
 
-          <div class="org-level org-level--second">
+          <div class="org-level org-level--board">
           <article class="role-card role-card--left" style="--delay: .25s">
             <div class="role-mark">
-              <span>RR</span>
+              <img class="role-photo role-photo--circle" src="assets/img/direttivo-roberto.jpg" alt="Roberto">
             </div>
             <div>
               <h3>Roberto</h3>
-              <span class="role-title">Vice</span>
+              <span class="role-title">Vice Presidente</span>
               <p>
                 Affianca la presidenza nella gestione e nel coordinamento.
               </p>
             </div>
           </article>
 
-          <article class="role-card role-card--right" style="--delay: .4s">
+          <article class="role-card role-card--center" style="--delay: .4s">
             <div class="role-mark">
-              <span>SS</span>
+              <img class="role-photo role-photo--circle" src="assets/img/direttivo-sonia.jpg" alt="Sonia">
             </div>
             <div>
               <h3>Sonia</h3>
-              <span class="role-title">Segretaria e Tesoriera</span>
+              <span class="role-title">Tesoriera</span>
               <p>
                 Cura segreteria, documenti e gestione economica del motoclub.
               </p>
             </div>
           </article>
-          </div>
 
-          <div class="org-connector org-connector--wide" aria-hidden="true"></div>
-
-          <div class="org-level org-level--team">
-          <article class="role-card role-card--left" style="--delay: .58s">
+          <article class="role-card role-card--right" style="--delay: .55s">
             <div class="role-mark">
-              <span>JK</span>
+              <img class="role-photo role-photo--circle" src="assets/img/direttivo-cinzia.jpg" alt="Cinzia">
+            </div>
+            <div>
+              <h3>Cinzia</h3>
+              <span class="role-title">Consigliera</span>
+              <p>
+                Partecipa al consiglio e supporta le attivita organizzative.
+              </p>
+            </div>
+          </article>
+
+          <article class="role-card role-card--left" style="--delay: .7s">
+            <div class="role-mark">
+              <img class="role-photo role-photo--circle" src="assets/img/direttivo-jack.jpg" alt="Jack">
             </div>
             <div>
               <h3>Jack</h3>
-              <span class="role-title">Responsabile Social Media</span>
+              <span class="role-title">Consigliere</span>
               <p>
-                Gestisce comunicazione, contenuti e presenza social del club.
+                Segue iniziative, comunicazione e supporto alla vita del club.
               </p>
             </div>
           </article>
 
-          <article class="role-card role-card--right" style="--delay: .72s">
+          <article class="role-card role-card--center" style="--delay: .85s">
             <div class="role-mark">
-              <span>AT</span>
+              <img class="role-photo role-photo--circle" src="assets/img/direttivo-anatol.jpg" alt="Anatol">
             </div>
             <div>
               <h3>Anatol</h3>
-              <span class="role-title">Responsabile Partnership</span>
+              <span class="role-title">Consigliere</span>
               <p>
-                Segue relazioni, collaborazioni e contatti con partner esterni.
-              </p>
-            </div>
-          </article>
-
-          <article class="role-card role-card--left" style="--delay: .86s">
-            <div class="role-mark">
-              <span>LZ</span>
-            </div>
-            <div>
-              <h3>Lorenzo</h3>
-              <span class="role-title">Responsabile Attivita Sportive</span>
-              <p>
-                Coordina iniziative, appuntamenti e attivita sportive.
+                Contribuisce al coordinamento operativo e alle attivita del club.
               </p>
             </div>
           </article>
 
           <article class="role-card role-card--right" style="--delay: 1s">
             <div class="role-mark">
-              <span>CC</span>
+              <img class="role-photo role-photo--circle" src="assets/img/direttivo-alessandro.jpg" alt="Alessandro">
             </div>
             <div>
-              <h3>Cinzia e Cimi</h3>
-              <span class="role-title">Responsabili Grafiche</span>
+              <h3>Alessandro</h3>
+              <span class="role-title">Consigliere</span>
               <p>
-                Curano identita visiva, materiali grafici e creativita del club.
+                Supporta il consiglio nelle decisioni e nelle attivita associative.
+              </p>
+            </div>
+          </article>
+          </div>
+
+          <span class="org-section-label">Nuove proposte</span>
+
+          <div class="org-level org-level--proposals">
+          <article class="role-card role-card--left" style="--delay: 1.15s">
+            <div class="role-mark">
+              <img class="role-photo role-photo--circle" src="assets/img/direttivo-loris.jpg" alt="Loris Venturoli">
+            </div>
+            <div>
+              <h3>Loris Venturoli</h3>
+              <span class="role-title">Proposta consigliere</span>
+              <p>
+                Candidatura proposta per il nuovo consiglio direttivo.
+              </p>
+            </div>
+          </article>
+
+          <article class="role-card role-card--center" style="--delay: 1.3s">
+            <div class="role-mark">
+              <img class="role-photo role-photo--circle" src="assets/img/direttivo-matteo.jpg" alt="Matteo Girella">
+            </div>
+            <div>
+              <h3>Matteo Girella</h3>
+              <span class="role-title">Proposta consigliere</span>
+              <p>
+                Candidatura proposta per il nuovo consiglio direttivo.
+              </p>
+            </div>
+          </article>
+
+          <article class="role-card role-card--right" style="--delay: 1.45s">
+            <div class="role-mark">
+              <img class="role-photo role-photo--circle" src="assets/img/direttivo-stefano.jpg" alt="Stefano Canziani">
+            </div>
+            <div>
+              <h3>Stefano Canziani</h3>
+              <span class="role-title">Proposta consigliere</span>
+              <p>
+                Candidatura proposta per il nuovo consiglio direttivo.
               </p>
             </div>
           </article>
@@ -1025,7 +1158,6 @@
       </div>
     </section>
   </main>
-
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -1038,7 +1170,8 @@
             <span>Affiliato FMI: 10373</span>
           </div>
           <nav class="footer-links" aria-label="Link sito">
-            <a href="index.html#club">Il Club</a>
+            <a href="index.html#chi-siamo">Il Club</a>
+            <a href="iscrizione.html">Iscriviti</a>
             <a href="events.html">Eventi</a>
             <a href="organizzazione.html">Organizzazione</a>
             <a href="shop.html">Shop</a>
@@ -1072,6 +1205,7 @@
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="cookie-policy.html">Cookie Policy</a>
             <a href="note-legali.html">Note legali</a>
+            <button type="button" id="cookiePreferences">Cookie</button>
           </nav>
           <div>&copy; <span id="year"></span> Unfaired Motoclub Shop ASD. Tutti i diritti riservati.</div>
         </div>
@@ -1130,5 +1264,8 @@
       mobileCards.forEach(card => cardObserver.observe(card));
     }
   </script>
+  <script src="assets/js/cookie-notice.js?v=1"></script>
 </body>
 </html>
+
+

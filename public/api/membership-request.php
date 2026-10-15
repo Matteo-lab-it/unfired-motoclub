@@ -41,7 +41,7 @@ if ($website !== '') {
     exit;
 }
 
-$allowedMembershipTypes = ['Member FMI', 'Sport FMI', 'Mini Sport FMI'];
+$allowedMembershipTypes = ['Member FMI', 'Sport FMI', 'Mini Sport FMI', 'Licenza FMI', 'Sport One Day FMI'];
 $allowedFmiValues = ['Si', 'No'];
 
 if (

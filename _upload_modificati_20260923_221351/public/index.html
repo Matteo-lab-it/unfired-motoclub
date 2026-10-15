@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Unfaired Moto Club ASD a Torino: eventi, uscite, shop soci, sponsor e passione motociclistica su strada." />
+  <title>Unfaired Moto Club</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+
+  <!-- SEO START -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Unfaired Moto Club" />
+  <meta name="geo.region" content="IT-TO" />
+  <meta name="geo.placename" content="Torino, Piemonte" />
+  <meta name="geo.position" content="45.0703;7.6869" />
+  <meta name="ICBM" content="45.0703, 7.6869" />
+  <meta name="theme-color" content="#0B5769" />
+  <link rel="canonical" href="https://www.unfairedmotoclub.it/" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:site_name" content="Unfaired Moto Club" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Unfaired Moto Club" />
+  <meta property="og:description" content="Unfaired Moto Club ASD a Torino: eventi, uscite, shop soci, sponsor e passione motociclistica su strada." />
+  <meta property="og:url" content="https://www.unfairedmotoclub.it/" />
+  <meta property="og:image" content="https://www.unfairedmotoclub.it/assets/img/logo.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Unfaired Moto Club" />
+  <meta name="twitter:description" content="Unfaired Moto Club ASD a Torino: eventi, uscite, shop soci, sponsor e passione motociclistica su strada." />
+  <meta name="twitter:image" content="https://www.unfairedmotoclub.it/assets/img/logo.svg" />
+  <!-- SEO END -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Organization", "SportsOrganization"],
+        "@id": "https://www.unfairedmotoclub.it/#organization",
+        "name": "Unfaired Moto Club",
+        "legalName": "Unfaired Motoclub Shop ASD",
+        "url": "https://www.unfairedmotoclub.it/",
+        "logo": "https://www.unfairedmotoclub.it/assets/img/logo.svg",
+        "image": "https://www.unfairedmotoclub.it/assets/img/home.jpeg",
+        "email": "info@unfairedmotoclub.it",
+        "telephone": "+393393667202",
+        "taxID": "94093110016",
+        "foundingDate": "2025",
+        "sport": "Motociclismo",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Via Paolo Sacchi 58",
+          "postalCode": "10128",
+          "addressLocality": "Torino",
+          "addressRegion": "Piemonte",
+          "addressCountry": "IT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.0703,
+          "longitude": 7.6869
+        },
+        "sameAs": [
+          "https://www.instagram.com/unfaired.motoclub/",
+          "https://www.facebook.com/UnfiredMotoclubASD",
+          "https://www.federmoto.it/motoclub/unfaired/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.unfairedmotoclub.it/#website",
+        "url": "https://www.unfairedmotoclub.it/",
+        "name": "Unfaired Moto Club",
+        "inLanguage": "it-IT",
+        "publisher": { "@id": "https://www.unfairedmotoclub.it/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.unfairedmotoclub.it/#webpage",
+        "url": "https://www.unfairedmotoclub.it/",
+        "name": "Unfaired Moto Club",
+        "description": "Unfaired Moto Club ASD a Torino: eventi, uscite, shop soci, sponsor e passione motociclistica su strada.",
+        "isPartOf": { "@id": "https://www.unfairedmotoclub.it/#website" },
+        "about": { "@id": "https://www.unfairedmotoclub.it/#organization" },
+        "inLanguage": "it-IT"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0B5769;
+      --bg-soft: #121212;
+      --card: #181818;
+      --text: #f5f5f5;
+      --muted: #b6b6b6;
+      --line: rgba(255,255,255,.10);
+      --accent: #008080;
+      --accent-2: #008080;
+      --max-width: 1180px;
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(0,128,128,.14), transparent 25%),
+        linear-gradient(180deg, #0B5769 0%, #083f4d 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .site-intro {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 18% 42%, rgba(0,128,128,.12), transparent 22%),
+        linear-gradient(90deg, #050505 0%, #111 58%, #050505 100%);
+      overflow: hidden;
+      animation: introScene 3s cubic-bezier(.75,0,.2,1) forwards;
+      pointer-events: none;
+    }
+
+    .site-intro::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(0,128,128,.10), transparent 28%),
+        repeating-linear-gradient(90deg, transparent 0 78px, rgba(255,255,255,.035) 78px 80px);
+      transform: translateX(-18%);
+      animation: introCurtain 3s cubic-bezier(.75,0,.2,1) forwards;
+    }
+
+    .site-intro::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 26%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(0,128,128,.78), transparent);
+      box-shadow: 0 0 26px rgba(0,128,128,.36);
+      transform: translateX(-100%);
+      animation: roadFlash 1.55s ease-out .15s forwards;
+    }
+
+    .intro-mascot {
+      position: absolute;
+      left: 50%;
+      bottom: 16%;
+      z-index: 1;
+      width: clamp(190px, 24vw, 360px);
+      transform-origin: 50% 100%;
+      opacity: 0;
+      animation: mascotEntrance 2.85s cubic-bezier(.2,.82,.2,1) .12s forwards;
+      filter:
+        drop-shadow(0 22px 26px rgba(0,0,0,.62))
+        drop-shadow(0 0 22px rgba(0,128,128,.34));
+    }
+
+    .intro-mascot img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .intro-word {
+      position: absolute;
+      left: 50%;
+      bottom: 16%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,.82);
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      animation: introWord 1.8s ease forwards;
+    }
+
+    @keyframes mascotEntrance {
+      0% { opacity: 0; transform: translate3d(-50%, 34px, 0) scale(.82) rotate(-5deg); }
+      16% { opacity: 1; }
+      34% { opacity: 1; transform: translate3d(-50%, -8px, 0) scale(1.02) rotate(2deg); }
+      58% { opacity: 1; transform: translate3d(-50%, 0, 0) scale(1.06) rotate(-1deg); }
+      78% { opacity: 1; transform: translate3d(-50%, -6px, 0) scale(1.02) rotate(1deg); }
+      100% { opacity: 0; transform: translate3d(-50%, -28px, 0) scale(.9) rotate(-4deg); }
+    }
+
+    @keyframes roadFlash {
+      to { transform: translateX(100%); }
+    }
+
+    @keyframes introCurtain {
+      0%, 46% { clip-path: inset(0 0 0 0); transform: translateX(-18%); }
+      100% { clip-path: inset(0 0 0 100%); transform: translateX(24%); }
+    }
+
+    @keyframes introScene {
+      0%, 72% { opacity: 1; visibility: visible; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+
+    @keyframes introWord {
+      0%, 30% { opacity: 0; transform: translateX(-50%) translateY(8px); }
+      48%, 72% { opacity: 1; transform: translateX(-50%) translateY(0); }
+      100% { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+    }
+
+    @keyframes heroBreath {
+      from { filter: saturate(1) contrast(1); }
+      to { filter: saturate(1.08) contrast(1.06); }
+    }
+
+    @keyframes heroLayerIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 10000;
+      transform: translateY(-140%);
+      border-radius: 999px;
+      background: var(--accent-2);
+      color: #111;
+      padding: 10px 16px;
+      font-weight: 900;
+      transition: transform .2s ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap; border: 0;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--accent-2);
+      outline-offset: 4px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent-2);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .78rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+      max-width: 760px;
+      margin-bottom: 18px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: .25s ease;
+      height: 100%;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #111;
+      box-shadow: 0 10px 30px rgba(0,128,128,.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(0,128,128,.35);
+    }
+
+    .btn-secondary {
+      border-color: var(--line);
+      background: rgba(255,255,255,.04);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,.28);
+      background: rgba(255,255,255,.08);
+    }
+
+    /* HEADER */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: linear-gradient(135deg, rgba(11,87,105,.96) 0%, rgba(8,63,77,.94) 58%, rgba(0,128,128,.84) 100%);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .brand-mark {
+      width: clamp(92px, 12vw, 138px);
+      height: 52px;
+      border-radius: 10px;
+      object-fit: contain; padding: 6px 8px;
+      background: rgba(255,255,255,.94);
+      box-shadow: none;
+      border: 1px solid rgba(255,255,255,.72);
+    }
+.main-nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: .95rem;
+      font-weight: 700;
+    }
+
+    .main-nav a {
+      color: #d8d8d8;
+      transition: .2s ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--accent-2);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: #fff;
+      border-radius: 12px;
+      cursor: pointer;
+      place-items: center;
+      gap: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      padding: 130px 0 70px;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -24px 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.94) 0%, rgba(0,0,0,.72) 48%, rgba(0,0,0,.45) 100%),
+        url("assets/img/moto.jpeg")
+        center/cover no-repeat;
+      transform: translate3d(0, var(--hero-shift, 0px), 0) scale(1.03);
+      animation: heroBreath 16s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 240px;
+      z-index: -1;
+      background: linear-gradient(transparent, #0d0d0d);
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.5rem, 9vw, 7.5rem);
+      line-height: .88;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1,
+    .hero h1 span,
+    .hero p,
+    .hero-actions,
+    .hero-stats {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: heroLayerIn .85s cubic-bezier(.2,.82,.2,1) forwards;
+    }
+
+    .hero h1 { animation-delay: 3.08s; }
+    .hero h1 span { animation-delay: 3.24s; }
+    .hero p { animation-delay: 3.38s; }
+    .hero-actions { animation-delay: 3.52s; }
+    .hero-stats { animation-delay: 3.68s; }
+
+    .hero h1 span {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255,255,255,.75);
+    }
+
+    .hero p {
+      color: #d0d0d0;
+      font-size: clamp(1rem, 2vw, 1.28rem);
+      max-width: 660px;
+      margin-bottom: 32px;
+    }
+
+    .hero-description {
+      max-width: 880px;
+      line-height: 1.55;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-stats {
+      margin-top: 62px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(120px, 190px));
+      gap: 16px;
+    }
+
+    .stat {
+      border-left: 2px solid var(--accent);
+      padding-left: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat::before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--accent-2), var(--accent));
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform .8s ease;
+    }
+
+    .stat.is-lit::before {
+      transform: scaleY(1);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.6rem;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 0;
+      scroll-margin-top: 96px;
+    }
+
+    main {
+      position: relative;
+      overflow: hidden;
+    }
+
+    main::before {
+      content: "";
+      position: absolute;
+      left: max(4vw, 18px);
+      top: 96vh;
+      bottom: 190px;
+      width: 2px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, transparent, rgba(0,128,128,.56), rgba(0,128,128,.44), transparent);
+      box-shadow: 0 0 28px rgba(0,128,128,.22);
+      opacity: .42;
+      transform: scaleY(var(--road-progress, .08));
+      transform-origin: top;
+      pointer-events: none;
+    }
+
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .24s ease-out, transform .24s cubic-bezier(.2,.8,.2,1);
+      transition-delay: var(--reveal-delay, 0s);
+      will-change: opacity, transform;
+    }
+
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    #club {
+      position: relative;
+      padding: 0;
+      scroll-margin-top: 118px;
+      background:
+        radial-gradient(circle at 82% 7%, rgba(0,128,128,.14), transparent 24%),
+        linear-gradient(180deg, rgba(8,63,77,.36), rgba(16,16,16,.98) 14%, #101010 86%, rgba(8,63,77,.20));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    #club::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, transparent 0 48px, rgba(255,255,255,.035) 49px 50px, transparent 51px 100%),
+        linear-gradient(180deg, rgba(255,255,255,.035), transparent 18%, transparent 82%, rgba(255,255,255,.025));
+      background-size: 96px 100%, 100% 100%;
+      opacity: .34;
+      pointer-events: none;
+    }
+
+    .about-story {
+      position: relative;
+      z-index: 1;
+      display: grid;
+    }
+
+    .about-section {
+      padding: 74px 0;
+    }
+
+    .about-story > .about-section:first-child {
+      padding-top: 118px;
+    }
+
+    .about-panel {
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+      gap: 52px;
+      align-items: center;
+    }
+
+    .about-panel.reverse {
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+    }
+
+    .about-copy-block {
+      display: grid;
+      gap: 22px;
+      max-width: 680px;
+    }
+
+    .about-copy-block p {
+      color: var(--muted);
+      font-size: clamp(1rem, 1.45vw, 1.16rem);
+      line-height: 1.78;
+    }
+
+    .about-copy-block .lead-tight {
+      color: #fff;
+      font-size: clamp(1.12rem, 1.8vw, 1.38rem);
+      line-height: 1.55;
+      font-weight: 800;
+    }
+
+    .about-copy-block .accent-word {
+      color: var(--accent-2);
+      font-weight: 900;
+    }
+
+    .about-media {
+      min-height: 430px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+      background: #101010;
+    }
+
+    .about-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+      display: block;
+      filter: saturate(.88) contrast(1.06);
+    }
+
+    .about-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, transparent 42%, rgba(0,0,0,.62)),
+        linear-gradient(90deg, rgba(0,128,128,.18), transparent 42%);
+      pointer-events: none;
+    }
+
+    .about-story > .about-section:first-child .about-panel {
+      grid-template-columns: minmax(0, 1.28fr) minmax(190px, .56fr);
+      gap: 32px;
+    }
+
+    .about-story > .about-section:first-child .about-media {
+      min-height: 240px;
+      max-width: 340px;
+      justify-self: end;
+    }
+
+    .about-story > .about-section:first-child .about-media img {
+      min-height: 240px;
+    }
+
+    .about-editorial {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+      padding: 20px 0 20px 24px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .about-editorial strong {
+      display: block;
+      color: #fff;
+      font-size: clamp(1.45rem, 3vw, 2.45rem);
+      line-height: 1.02;
+      text-transform: uppercase;
+    }
+
+    .about-emphasis {
+      margin-top: 10px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: #fff;
+      font-size: clamp(1.55rem, 3.2vw, 2.9rem);
+      line-height: 1.04;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .about-rule {
+      position: relative;
+      margin: 16px 0;
+      padding: 112px 0;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(11,87,105,.70), rgba(0,0,0,.92)),
+        url("assets/img/crozia.jpeg") center/cover;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .about-rule::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 50% 48%, rgba(0,128,128,.28), transparent 34%),
+        linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.82));
+    }
+
+    .about-rule-inner {
+      text-align: center;
+      max-width: 1040px;
+    }
+
+    .about-rule .eyebrow {
+      justify-content: center;
+    }
+
+    .about-rule-subtitle {
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+      margin-top: 14px;
+    }
+
+    .about-rule-claim {
+      position: relative;
+      display: inline-block;
+      margin: 44px auto 34px;
+      color: #fff;
+      font-family: "Chiller", "Brush Script MT", "Segoe Print", "Bradley Hand ITC", cursive;
+      font-size: clamp(3.2rem, 10vw, 9rem);
+      line-height: .88;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-shadow: 0 20px 38px rgba(0,0,0,.55);
+    }
+
+    .about-rule-text {
+      display: grid;
+      gap: 8px;
+      max-width: 680px;
+      margin: 0 auto;
+      color: #ddd;
+      font-size: clamp(1rem, 1.5vw, 1.18rem);
+    }
+
+    .about-rule-text strong {
+      display: block;
+      margin-top: 12px;
+      color: #fff;
+      font-size: clamp(1.18rem, 2vw, 1.55rem);
+    }
+
+    .about-objective {
+      padding-bottom: 112px;
+    }
+
+    .about-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 26px;
+      margin: 14px 0 4px;
+    }
+
+    .about-keywords span {
+      color: var(--accent-2);
+      font-size: clamp(2.2rem, 6vw, 5.5rem);
+      line-height: .9;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .about-closing {
+      margin-top: 34px;
+      color: #fff;
+      font-family: "Chiller", "Brush Script MT", "Segoe Print", "Bradley Hand ITC", cursive;
+      font-size: clamp(3rem, 7vw, 6.4rem);
+      line-height: .9;
+      text-transform: uppercase;
+      text-shadow: 0 18px 34px rgba(0,0,0,.40);
+    }
+
+    .about-closing::after {
+      content: "";
+      display: block;
+      width: min(420px, 76vw);
+      height: 4px;
+      margin-top: 18px;
+      background: var(--accent);
+      box-shadow: 0 0 24px rgba(0,128,128,.40);
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      display: block;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .value h3 {
+      margin-bottom: 4px;
+    }
+
+    .value p {
+      color: var(--muted);
+      font-size: .96rem;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    /* CTA */
+    .cta-box {
+      padding: 58px;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 90% 20%, rgba(0,128,128,.24), transparent 30%),
+        linear-gradient(135deg, #24110b, #111);
+      border: 1px solid rgba(0,128,128,.28);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box p {
+      color: #d4d4d4;
+      max-width: 700px;
+      margin-top: 10px;
+    }
+
+    /* CONTACT */
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 14px;
+      align-items: start;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-row > .icon {
+      flex: 0 0 24px;
+      color: var(--accent-2);
+      margin-top: 2px;
+    }
+
+    .contact-row:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .contact-row strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .contact-row span,
+    .contact-row a {
+      color: var(--muted);
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .privacy-note {
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.55;
+    }
+
+    .privacy-note a {
+      color: var(--accent-2);
+      font-weight: 800;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #101010;
+      color: #fff;
+      border-radius: 13px;
+      padding: 15px 16px;
+      outline: none;
+      font: inherit;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,128,128,.10);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 46px 0 34px;
+      background: #080808;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 34px;
+      align-items: start;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .footer-brand { color: #fff; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 10px; }
+    .footer-copy { max-width: 470px; margin-bottom: 22px; }
+    .footer-info { display: grid; gap: 4px; margin-bottom: 22px; color: var(--muted); }
+    .footer-info a { color: #fff; font-weight: 700; }
+    .footer-info a:hover { color: var(--accent-2); }
+    .footer-links, .footer-legal { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; }
+    .footer-links a, .footer-legal a, .footer-legal button { color: #ddd; font: inherit; background: none; border: 0; padding: 0; cursor: pointer; transition: .2s ease; }
+    .footer-links a:hover, .footer-legal a:hover, .footer-legal button:hover { color: var(--accent-2); }
+    .footer-meta { display: grid; gap: 14px; justify-items: end; }
+
+    .socials { display: flex; gap: 12px; justify-content: flex-end; }
+    .socials a { min-width: 42px; height: 42px; padding: 0 12px; display: grid; place-items: center; border-radius: 12px; border: 1px solid var(--line); color: #fff; transition: .2s ease; }
+    .socials svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .socials a:hover { border-color: var(--accent); color: var(--accent-2); }
+
+    .cookie-banner { position: fixed; left: 50%; bottom: 18px; z-index: 1200; width: calc(100vw - 32px); max-width: 760px; padding: 18px; display: none; grid-template-columns: 1fr auto; gap: 18px; align-items: center; transform: translateX(-50%); border: 1px solid rgba(255,255,255,.16); border-radius: 16px; background: rgba(10,10,10,.96); box-shadow: 0 18px 60px rgba(0,0,0,.45); backdrop-filter: blur(14px); }
+    .cookie-banner.is-visible { display: grid; }
+    .cookie-banner strong { display: block; margin-bottom: 4px; }
+    .cookie-banner p { color: var(--muted); font-size: .92rem; }
+    .cookie-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+    .cookie-link, .cookie-button { min-height: 42px; padding: 0 16px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; cursor: pointer; }
+    .cookie-link { border: 1px solid var(--line); background: rgba(255,255,255,.04); color: #fff; }
+    .cookie-button { border: 0; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #111; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1120px) {
+      .menu-toggle {
+        display: grid;
+      }
+
+      .main-nav {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        padding: 24px 4%;
+        background: linear-gradient(135deg, rgba(11,87,105,.98) 0%, rgba(8,63,77,.98) 62%, rgba(0,128,128,.92) 100%);
+        border-bottom: 1px solid var(--line);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-panel,
+      .about-panel.reverse {
+        grid-template-columns: 1fr;
+      }
+
+      .about-story > .about-section:first-child .about-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .about-story > .about-section:first-child .about-media {
+        max-width: 360px;
+        justify-self: start;
+      }
+
+      .cta-box {
+        grid-template-columns: 1fr;
+        padding: 42px 30px;
+      }
+
+    }
+
+    @media (max-width: 640px) {
+      .intro-mascot {
+        bottom: 18%;
+        width: min(58vw, 240px);
+      }
+
+      .intro-word {
+        width: 100%;
+        text-align: center;
+        font-size: .66rem;
+      }
+
+      section {
+        padding: 76px 0;
+        scroll-margin-top: 118px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 145px;
+        padding-bottom: 88px;
+      }
+
+      .hero h1 {
+        max-width: 9ch;
+        font-size: clamp(2.75rem, 13vw, 3.5rem);
+        line-height: .96;
+        letter-spacing: 0;
+      }
+
+      .hero p {
+        max-width: 31ch;
+      }
+
+      .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+        margin-top: 45px;
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .section-title {
+        max-width: 100%;
+        font-size: clamp(1.95rem, 8.2vw, 2.45rem);
+        line-height: 1.08;
+        overflow-wrap: break-word;
+      }
+
+      .section-text {
+        max-width: 32ch;
+      }
+
+      .about-section {
+        padding: 56px 0;
+      }
+
+      .about-story > .about-section:first-child {
+        padding-top: 96px;
+      }
+
+      .about-panel,
+      .about-panel.reverse {
+        gap: 28px;
+      }
+
+      .about-copy-block {
+        gap: 18px;
+      }
+
+      .about-media {
+        min-height: 280px;
+      }
+
+      .about-media img {
+        min-height: 280px;
+      }
+
+      .about-story > .about-section:first-child .about-media,
+      .about-story > .about-section:first-child .about-media img {
+        min-height: 190px;
+      }
+
+      .about-editorial {
+        padding-left: 18px;
+      }
+
+      .about-emphasis {
+        font-size: clamp(1.32rem, 8vw, 2.05rem);
+      }
+
+      .about-rule {
+        margin: 0;
+        padding: 78px 0;
+      }
+
+      .about-rule-claim {
+        margin: 34px auto 28px;
+        max-width: 100%;
+        font-size: clamp(3.05rem, 16vw, 5.2rem);
+        overflow-wrap: break-word;
+      }
+
+      .about-keywords {
+        gap: 8px 18px;
+      }
+
+      .about-keywords span {
+        font-size: clamp(2rem, 13vw, 3.5rem);
+      }
+
+      .about-closing {
+        font-size: clamp(2.75rem, 14vw, 4.8rem);
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-meta { justify-items: start; }
+      .socials { justify-content: flex-start; }
+      .cookie-banner { grid-template-columns: 1fr; }
+      .cookie-actions { justify-content: flex-start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .site-intro {
+        display: none;
+      }
+
+      .hero::before {
+        animation: none;
+        transform: none;
+      }
+
+      .hero h1,
+      .hero h1 span,
+      .hero p,
+      .hero-actions,
+      .hero-stats,
+      .reveal-on-scroll {
+        opacity: 1;
+        transform: none;
+        animation: none;
+        transition: none;
+      }
+
+      main::before {
+        display: none;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/join-popup.css?v=1">
+  <link rel="stylesheet" href="assets/css/moto-background.css?v=1">
+  <link rel="stylesheet" href="assets/css/join-attention.css?v=1">
+  <link rel="stylesheet" href="assets/css/cookie-notice.css?v=1">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Salta al contenuto</a>
+  <div class="site-intro" aria-hidden="true">
+    <div class="intro-mascot">
+      <img src="assets/img/mascotte.png" alt="">
+    </div>
+    <div class="intro-word">Accendi la strada</div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Unfaired Moto Club">
+        <img class="brand-mark" src="assets/img/logo.svg" alt="Unfaired Moto Club">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Apri menu" aria-controls="mainNav" aria-expanded="false" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navigazione principale">
+        <a href="iscrizione.html">Iscriviti</a>
+        <a href="events.html">Eventi</a>
+        <a href="organizzazione.html">Organizzazione</a>
+        <a href="shop.html">Shop</a>
+        <a href="affiliazioni-sponsor.html">Sponsor &amp; Affiliazioni</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Passione - Strada - Fratellanza</span>
+          <h1>Unfaired <span>Moto Club</span></h1>
+          <p class="hero-description">
+            Unfaired Motoclub ASD &ndash; Motoclub FMI Torino.<br>
+            Unfaired Motoclub &egrave; un motoclub FMI Torino che organizza ride di gruppo, track day, viaggi in moto ed eventi motociclistici.<br>
+            Non siamo solo motociclisti.<br>
+            <strong>Siamo una community che vive la strada.</strong><br>
+            <strong>Unfaired MotoClub &egrave; per chi la moto non la guarda.</strong><br>
+            <strong>LA VIVE.</strong>
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-secondary" href="#chi-siamo">Conosci il club</a>
+            <a class="btn btn-secondary" href="iscrizione.html">Iscriviti</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>50+</strong>
+              <span>Membri attivi</span>
+            </div>
+            <div class="stat">
+              <strong>120</strong>
+              <span>Uscite organizzate</span>
+            </div>
+            <div class="stat">
+              <strong>30K</strong>
+              <span>Km percorsi insieme</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="club">
+      <div class="about-story" id="chi-siamo">
+        <div class="about-section">
+          <div class="container about-panel">
+            <div class="about-copy-block">
+              <span class="eyebrow">La nostra crew</span>
+              <h2 class="section-title">La nostra crew</h2>
+              <p class="lead-tight">
+                Un motoclub nato da una community.<br>
+                Una storia fatta di strada, persone e passione vera.
+              </p>
+            </div>
+
+            <div class="about-media">
+              <img src="assets/img/home.jpeg" alt="Unfaired MotoClub, foto di gruppo">
+            </div>
+          </div>
+        </div>
+
+        <div class="about-section">
+          <div class="container about-panel reverse">
+            <div class="about-media">
+              <img src="assets/img/gruppo 2.jpeg" alt="Motociclisti Unfaired in viaggio">
+            </div>
+
+            <div class="about-copy-block">
+              <span class="eyebrow">Origini</span>
+              <h2 class="section-title">Da dove nasciamo</h2>
+              <p>
+                Nel 2023 nasce <span class="accent-word">Fluffy Squad</span>, una community motociclistica che in poco tempo supera i 200 membri.<br>
+                Un gruppo enorme, nato per riportare il motociclismo a qualcosa di semplice:<br>
+                passione, amicizia e strada.
+              </p>
+              <p>
+                Ma quando una community cresce troppo in fretta, diventa difficile mantenere lo spirito iniziale.<br>
+                Per questo nel novembre 2025 nasce Unfaired MotoClub.
+              </p>
+              <div class="about-editorial">
+                <strong>Un passo avanti.</strong>
+                <strong>Un progetto pi&ugrave; solido.</strong>
+                <strong>Un motoclub vero.</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-section">
+          <div class="container about-panel">
+            <div class="about-copy-block">
+              <span class="eyebrow">Oggi</span>
+              <h2 class="section-title">Cosa siamo oggi</h2>
+              <p>
+                Oggi Unfaired MotoClub conta 138 tesserati ufficiali.<br>
+                Motociclisti dai vent&rsquo;anni ai sessant&rsquo;anni.<br>
+                Sportive, naked, turistiche e moto da pista.<br>
+                Due piloti impegnati nel CIVS.
+              </p>
+              <div class="about-emphasis">
+                Ma la moto che guidi non conta.<br>
+                Conta come vivi la strada.
+              </div>
+            </div>
+
+            <div class="about-media">
+              <img src="assets/img/crozia.jpeg" alt="Unfaired MotoClub durante un viaggio">
+            </div>
+          </div>
+        </div>
+
+        <div class="about-rule">
+          <div class="container about-rule-inner">
+            <span class="eyebrow">La regola del club</span>
+            <p class="about-rule-subtitle">Nel nostro MotoClub c&rsquo;&egrave; una regola non scritta.</p>
+            <div class="about-rule-claim">Nessuno rimane indietro.</div>
+            <div class="about-rule-text">
+              <p>Non importa che moto hai.</p>
+              <p>Non importa se sei il pi&ugrave; veloce o l&rsquo;ultimo del gruppo.</p>
+              <strong>Se sei con noi, sei parte della famiglia.</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-section about-objective">
+          <div class="container about-panel reverse">
+            <div class="about-media">
+              <img src="assets/img/pista.jpeg" alt="Moto in pista durante un evento">
+            </div>
+
+            <div class="about-copy-block">
+              <span class="eyebrow">Direzione</span>
+              <h2 class="section-title">Il nostro obiettivo</h2>
+              <p>Vogliamo costruire un MotoClub solido.</p>
+              <p>Un punto di riferimento per i giovani che vogliono vivere il motociclismo in modo sano, attivo e autentico.</p>
+              <div class="about-keywords" aria-label="Strada, pista, community">
+                <span>Strada.</span>
+                <span>Pista.</span>
+                <span>Community.</span>
+              </div>
+              <div class="about-closing">Questo &egrave; Unfaired MotoClub.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <span class="eyebrow">Entra nel gruppo</span>
+            <h2>La prossima strada potrebbe essere la tua.</h2>
+            <p>
+              Contattaci per conoscere il club, partecipare a un'uscita o ricevere
+              informazioni sull'iscrizione.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="#contatti">Contattaci ora</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatti">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow">Contatti</span>
+          <h2 class="section-title">Parliamo di moto e nuove strade</h2>
+          <p class="section-text">
+            Scrivici per partecipare alle attivita del club o per collaborazioni,
+            raduni ed eventi.
+          </p>
+
+          <div class="contact-card contact-list">
+            <div class="contact-row">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="M3 7l9 6 9-6"></path>
+              </svg>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:info@unfairedmotoclub.it">info@unfairedmotoclub.it</a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="7" y="2" width="10" height="20" rx="2"></rect>
+                <path d="M11 18h2"></path>
+              </svg>
+              <div>
+                <strong>Telefono</strong>
+                <a href="tel:+393393667202">+39 339 366 7202</a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s7-5 7-12a7 7 0 0 0-14 0c0 7 7 12 7 12z"></path>
+                <circle cx="12" cy="9" r="2"></circle>
+              </svg>
+              <div>
+                <strong>Sede legale</strong>
+                <a href="https://www.google.com/maps/search/?api=1&query=Via%20Paolo%20Sacchi%2058%2C%2010128%20Torino" target="_blank" rel="noopener noreferrer">Via Paolo Sacchi 58, 10128 Torino</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-card contact-form" id="contactForm" action="api/contact.php" method="post">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;opacity:0;" />
+          <div class="form-row">
+            <label class="sr-only" for="contactNome">Nome</label>
+            <input id="contactNome" type="text" name="nome" placeholder="Nome" autocomplete="name" required />
+            <label class="sr-only" for="contactEmail">Email</label>
+            <input id="contactEmail" type="email" name="email" placeholder="Email" autocomplete="email" required />
+          </div>
+
+          <label class="sr-only" for="contactOggetto">Oggetto</label>
+          <input id="contactOggetto" type="text" name="oggetto" placeholder="Oggetto" required />
+          <label class="sr-only" for="contactMessaggio">Messaggio</label>
+          <textarea id="contactMessaggio" name="messaggio" placeholder="Scrivi il tuo messaggio..." required></textarea>
+
+          <small class="privacy-note">Inviando il messaggio autorizzi il trattamento dei dati per gestire la tua richiesta. Leggi la <a href="privacy-policy.html">Privacy Policy</a>.</small>
+          <button class="btn btn-primary" type="submit">Invia messaggio</button>
+          <small id="formMessage" style="color:var(--muted);" role="status" aria-live="polite"></small>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-main">
+          <div class="footer-brand">Unfaired Motoclub Shop ASD</div>
+          <p class="footer-copy">Passione per la strada, rispetto per le persone e attenzione ai dati che ci affidi quando ci contatti o partecipi alle attivita del club.</p>
+          <div class="footer-info">
+            <span>Email: <a href="mailto:info@unfairedmotoclub.it">info@unfairedmotoclub.it</a></span>
+            <span>Codice Fiscale 94093110016</span>
+            <span>Affiliato FMI: 10373</span>
+          </div>
+          <nav class="footer-links" aria-label="Link sito">
+            <a href="#chi-siamo">Il Club</a>
+            <a href="iscrizione.html">Iscriviti</a>
+            <a href="events.html">Eventi</a>
+            <a href="organizzazione.html">Organizzazione</a>
+            <a href="shop.html">Shop</a>
+            <a href="affiliazioni-sponsor.html">Sponsor &amp; Affiliazioni</a>
+            <a href="#contatti">Contatti</a>
+          </nav>
+        </div>
+        <div class="footer-meta">
+          <div class="socials">
+            <a href="https://www.instagram.com/unfaired.motoclub/" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="4" width="16" height="16" rx="5"></rect>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M17 7h.01"></path>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/UnfiredMotoclubASD" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v6h3v-6h2l1-3h-3v-1a1 1 0 0 1 1-1h2V8z"></path>
+              </svg>
+            </a>
+            <a href="https://www.federmoto.it/motoclub/unfaired/" aria-label="Federazione Motociclistica Italiana">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z"></path>
+                <path d="M9 12h6"></path>
+                <path d="M12 9v6"></path>
+              </svg>
+            </a>
+          </div>
+          <nav class="footer-legal" aria-label="Link legali">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="cookie-policy.html">Cookie Policy</a>
+            <a href="note-legali.html">Note legali</a>
+            <button type="button" id="cookiePreferences">Cookie</button>
+          </nav>
+          <div>&copy; <span id="year"></span> Unfaired Motoclub Shop ASD. Tutti i diritti riservati.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class=cookie-banner id=cookieBanner role=dialog aria-live=polite aria-labelledby=cookieTitle aria-describedby=cookieText>
+    <div><strong id=cookieTitle>Cookie e strumenti tecnici</strong><p id=cookieText>Usiamo solo strumenti tecnici necessari al funzionamento del sito e alla memoria di questa scelta. Non usiamo cookie di profilazione o marketing.</p></div>
+    <div class=cookie-actions>
+      <a class=cookie-link href=cookie-policy.html>Leggi policy</a>
+      <button class=cookie-button type=button id=acceptCookies>Ho capito</button>
+    </div>
+  </div>
+
+  <script>
+    function setMenuOpen(isOpen) {
+      const menu = document.getElementById("mainNav");
+      const toggle = document.querySelector(".menu-toggle");
+      menu.classList.toggle("open", isOpen);
+      if (toggle) {
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Chiudi menu" : "Apri menu");
+      }
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById("mainNav");
+      setMenuOpen(!menu.classList.contains("open"));
+    }
+
+    function scrollToSection(hash) {
+      const target = hash === "#club"
+        ? document.querySelector("#chi-siamo")
+        : document.querySelector(hash);
+      if (!target) return false;
+
+      const header = document.querySelector(".site-header");
+      const headerHeight = header ? header.offsetHeight : 0;
+      const extraSpace = window.matchMedia("(max-width: 640px)").matches ? 34 : 20;
+      const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - extraSpace;
+
+      window.scrollTo({
+        top: Math.max(targetTop, 0),
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+      });
+
+      return true;
+    }
+
+    document.querySelectorAll("#mainNav a").forEach(link => {
+      link.addEventListener("click", () => {
+        setMenuOpen(false);
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", event => {
+        const hash = link.getAttribute("href");
+        if (!hash || hash === "#") return;
+        if (!scrollToSection(hash)) return;
+        event.preventDefault();
+        history.pushState(null, "", hash);
+      });
+    });
+
+    window.addEventListener("load", () => {
+      if (window.location.hash) {
+        window.setTimeout(() => scrollToSection(window.location.hash), 80);
+      }
+    });
+
+    async function sendMessage(event) {
+      event.preventDefault();
+      const form = event.target;
+      const message = document.getElementById("formMessage");
+      const button = form.querySelector("button[type='submit']");
+      const originalText = button.textContent;
+
+      message.style.color = "var(--muted)";
+      message.textContent = "Invio in corso...";
+      button.disabled = true;
+      button.textContent = "Invio...";
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { "Accept": "application/json" }
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || "Non sono riuscito a inviare il messaggio.");
+        }
+
+        message.style.color = "var(--accent-2)";
+        message.textContent = result.message;
+        form.reset();
+      } catch (error) {
+        message.style.color = "#008080";
+        message.textContent = error.message;
+      } finally {
+        button.disabled = false;
+        button.textContent = originalText;
+      }
+    }
+
+    document.getElementById("contactForm").addEventListener("submit", sendMessage);
+
+    function applyParticipationPrefill() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("participa") !== "1") return;
+
+      const form = document.getElementById("contactForm");
+      if (!form) return;
+
+      const title = params.get("titolo") || "evento del club";
+      const date = params.get("data") || "";
+      const place = params.get("luogo") || "";
+      const subject = form.querySelector('[name="oggetto"]');
+      const message = form.querySelector('[name="messaggio"]');
+
+      if (subject && !subject.value) {
+        subject.value = `Partecipazione evento: ${title}`;
+      }
+
+      if (message && !message.value) {
+        const details = [date, place].filter(Boolean).join(" - ");
+        message.value = `Ciao, vorrei partecipare all evento "${title}"${details ? ` (${details})` : ""}.`;
+      }
+    }
+
+    applyParticipationPrefill();
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealObserver = "IntersectionObserver" in window && !reduceMotion
+      ? new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          });
+        }, { rootMargin: "0px 0px 0px 0px", threshold: .04 })
+      : null;
+
+    function registerRevealTargets(root = document) {
+      const targets = root.querySelectorAll(".section-head, .value, .about-panel > *, .about-rule-inner, .cta-box, .contact-card");
+
+      targets.forEach((target, index) => {
+        if (target.classList.contains("reveal-on-scroll")) return;
+        target.classList.add("reveal-on-scroll");
+        target.style.setProperty("--reveal-delay", `${Math.min(index % 2, 1) * .015}s`);
+
+        if (revealObserver) {
+          revealObserver.observe(target);
+        } else {
+          target.classList.add("is-visible");
+        }
+      });
+    }
+
+    function animateStats() {
+      const stats = document.querySelectorAll(".stat");
+      const statObserver = "IntersectionObserver" in window && !reduceMotion
+        ? new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (!entry.isIntersecting) return;
+              runStat(entry.target);
+              statObserver.unobserve(entry.target);
+            });
+          }, { threshold: .55 })
+        : null;
+
+      stats.forEach(stat => {
+        if (statObserver) {
+          statObserver.observe(stat);
+        } else {
+          runStat(stat);
+        }
+      });
+    }
+
+    function runStat(stat) {
+      const number = stat.querySelector("strong");
+      if (!number || number.dataset.animated) return;
+
+      number.dataset.animated = "true";
+      stat.classList.add("is-lit");
+
+      const original = number.textContent.trim();
+      const match = original.match(/^(\d+)(.*)$/);
+      if (!match || reduceMotion) return;
+
+      const target = Number(match[1]);
+      const suffix = match[2] || "";
+      const start = performance.now();
+      const duration = 950;
+
+      function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        number.textContent = `${Math.round(target * eased)}${suffix}`;
+
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          number.textContent = original;
+        }
+      }
+
+      requestAnimationFrame(tick);
+    }
+
+    function updateHomeMotion() {
+      if (reduceMotion) return;
+
+      const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+      const progress = Math.min(window.scrollY / maxScroll, 1);
+      document.documentElement.style.setProperty("--road-progress", String(Math.max(.08, progress)));
+
+      const heroShift = Math.min(window.scrollY * .12, 52);
+      document.documentElement.style.setProperty("--hero-shift", `${heroShift}px`);
+    }
+
+    registerRevealTargets();
+    window.setTimeout(animateStats, 3600);
+    updateHomeMotion();
+    window.addEventListener("scroll", updateHomeMotion, { passive: true });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookiePreferences = document.getElementById('cookiePreferences');
+    const acceptCookies = document.getElementById('acceptCookies');
+
+    function showCookieBanner() { cookieBanner.classList.add('is-visible'); }
+    function hideCookieBanner() { cookieBanner.classList.remove('is-visible'); localStorage.setItem('unfairedCookieNotice', 'accepted'); }
+
+    if (!localStorage.getItem('unfairedCookieNotice')) { showCookieBanner(); }
+    acceptCookies.addEventListener('click', hideCookieBanner);
+    cookiePreferences.addEventListener('click', showCookieBanner);
+  </script>
+  <script src="assets/js/join-popup.js?v=1"></script>
+  <script src="assets/js/cookie-notice.js?v=1"></script>
+</body>
+</html>
+
+
